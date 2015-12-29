@@ -122,6 +122,126 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/noticias')) {
+            // noticias
+            if (rtrim($pathinfo, '/') === '/noticias') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'noticias');
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::indexAction',  '_route' => 'noticias',);
+            }
+
+            // noticias_show
+            if (preg_match('#^/noticias/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::showAction',));
+            }
+
+            // noticias_new
+            if ($pathinfo === '/noticias/new') {
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::newAction',  '_route' => 'noticias_new',);
+            }
+
+            // noticias_create
+            if ($pathinfo === '/noticias/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_noticias_create;
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::createAction',  '_route' => 'noticias_create',);
+            }
+            not_noticias_create:
+
+            // noticias_edit
+            if (preg_match('#^/noticias/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::editAction',));
+            }
+
+            // noticias_update
+            if (preg_match('#^/noticias/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_noticias_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::updateAction',));
+            }
+            not_noticias_update:
+
+            // noticias_delete
+            if (preg_match('#^/noticias/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_noticias_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::deleteAction',));
+            }
+            not_noticias_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/plataforma')) {
+            // plataforma
+            if (rtrim($pathinfo, '/') === '/plataforma') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'plataforma');
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::indexAction',  '_route' => 'plataforma',);
+            }
+
+            // plataforma_show
+            if (preg_match('#^/plataforma/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::showAction',));
+            }
+
+            // plataforma_new
+            if ($pathinfo === '/plataforma/new') {
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::newAction',  '_route' => 'plataforma_new',);
+            }
+
+            // plataforma_create
+            if ($pathinfo === '/plataforma/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_plataforma_create;
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::createAction',  '_route' => 'plataforma_create',);
+            }
+            not_plataforma_create:
+
+            // plataforma_edit
+            if (preg_match('#^/plataforma/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::editAction',));
+            }
+
+            // plataforma_update
+            if (preg_match('#^/plataforma/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_plataforma_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::updateAction',));
+            }
+            not_plataforma_update:
+
+            // plataforma_delete
+            if (preg_match('#^/plataforma/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_plataforma_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::deleteAction',));
+            }
+            not_plataforma_delete:
+
+        }
+
         if (0 === strpos($pathinfo, '/juegos')) {
             // juegos
             if (rtrim($pathinfo, '/') === '/juegos') {

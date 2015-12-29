@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class juegosType extends AbstractType
+class noticiasType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,14 +15,10 @@ class juegosType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('tituloJue')
-            ->add('descJue')
-            ->add('compJue')
-            ->add('fotoJue')
-            ->add('iconoJue')
-            ->add('juecat')
-            ->add('jueplat')
-            ->add('juenots')
+            ->add('tituloNot')
+            ->add('textoNot')
+            ->add('fotoNot')
+            ->add('notjue')
         ;
     }
     
@@ -32,7 +28,7 @@ class juegosType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'uniJuegos\Bundle\Entity\juegos'
+            'data_class' => 'uniJuegos\Bundle\Entity\noticias'
         ));
     }
 
@@ -41,6 +37,6 @@ class juegosType extends AbstractType
      */
     public function getName()
     {
-        return 'unijuegos_bundle_juegos';
+        return 'unijuegos_bundle_noticias';
     }
 }

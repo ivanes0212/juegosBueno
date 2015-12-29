@@ -3,6 +3,7 @@
 namespace uniJuegos\Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * juegos
@@ -212,4 +213,88 @@ private $juecat;
     }
     public function __toString() {
      return $this->tituloJue;}
+     
+     
+           /**
+* @ORM\ManyToMany(targetEntity="plataforma", mappedBy="platjue")
+*/
+
+private $jueplat;
+
+public function __construct() {
+$this->jueplat = new ArrayCollection();
+$this->juenots = new ArrayCollection();
+}
+
+    /**
+     * Add jueplat
+     *
+     * @param \uniJuegos\Bundle\Entity\plataforma $jueplat
+     * @return juegos
+     */
+    public function addJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
+    {
+        $this->jueplat[] = $jueplat;
+
+        return $this;
+    }
+
+    /**
+     * Remove jueplat
+     *
+     * @param \uniJuegos\Bundle\Entity\plataforma $jueplat
+     */
+    public function removeJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
+    {
+        $this->jueplat->removeElement($jueplat);
+    }
+
+    /**
+     * Get jueplat
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getJueplat()
+    {
+        return $this->jueplat;
+    }
+    
+    /**
+* @ORM\OneToMany(targetEntity="noticias", mappedBy="notjue", cascade={"remove"})
+*/
+
+private $juenots;
+
+    /**
+     * Add juenots
+     *
+     * @param \uniJuegos\Bundle\Entity\noticias $juenots
+     * @return juegos
+     */
+    public function addJuenot(\uniJuegos\Bundle\Entity\noticias $juenots)
+    {
+        $this->juenots[] = $juenots;
+
+        return $this;
+    }
+
+    /**
+     * Remove juenots
+     *
+     * @param \uniJuegos\Bundle\Entity\noticias $juenots
+     */
+    public function removeJuenot(\uniJuegos\Bundle\Entity\noticias $juenots)
+    {
+        $this->juenots->removeElement($juenots);
+    }
+
+    /**
+     * Get juenots
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getJuenots()
+    {
+        return $this->juenots;
+    }
 }
