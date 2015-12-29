@@ -1,3 +1,11 @@
+uni_juegos_juegos:
+    resource: "@uniJuegosBundle/Resources/config/routing/juegos.yml"
+    prefix:   /juegos
+
+uni_juegos_categorias:
+    resource: "@uniJuegosBundle/Resources/config/routing/categorias.yml"
+    prefix:   /categorias
+
 uni_juegos_homepage:
     path:     /hello/{name}
     defaults: { _controller: uniJuegosBundle:Default:index }

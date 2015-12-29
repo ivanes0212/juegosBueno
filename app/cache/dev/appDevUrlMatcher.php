@@ -122,6 +122,126 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/juegos')) {
+            // juegos
+            if (rtrim($pathinfo, '/') === '/juegos') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'juegos');
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::indexAction',  '_route' => 'juegos',);
+            }
+
+            // juegos_show
+            if (preg_match('#^/juegos/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::showAction',));
+            }
+
+            // juegos_new
+            if ($pathinfo === '/juegos/new') {
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::newAction',  '_route' => 'juegos_new',);
+            }
+
+            // juegos_create
+            if ($pathinfo === '/juegos/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_juegos_create;
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::createAction',  '_route' => 'juegos_create',);
+            }
+            not_juegos_create:
+
+            // juegos_edit
+            if (preg_match('#^/juegos/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::editAction',));
+            }
+
+            // juegos_update
+            if (preg_match('#^/juegos/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_juegos_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::updateAction',));
+            }
+            not_juegos_update:
+
+            // juegos_delete
+            if (preg_match('#^/juegos/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_juegos_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::deleteAction',));
+            }
+            not_juegos_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/categorias')) {
+            // categorias
+            if (rtrim($pathinfo, '/') === '/categorias') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'categorias');
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::indexAction',  '_route' => 'categorias',);
+            }
+
+            // categorias_show
+            if (preg_match('#^/categorias/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::showAction',));
+            }
+
+            // categorias_new
+            if ($pathinfo === '/categorias/new') {
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::newAction',  '_route' => 'categorias_new',);
+            }
+
+            // categorias_create
+            if ($pathinfo === '/categorias/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_categorias_create;
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::createAction',  '_route' => 'categorias_create',);
+            }
+            not_categorias_create:
+
+            // categorias_edit
+            if (preg_match('#^/categorias/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::editAction',));
+            }
+
+            // categorias_update
+            if (preg_match('#^/categorias/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_categorias_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::updateAction',));
+            }
+            not_categorias_update:
+
+            // categorias_delete
+            if (preg_match('#^/categorias/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_categorias_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::deleteAction',));
+            }
+            not_categorias_delete:
+
+        }
+
         // uni_juegos_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'uni_juegos_homepage')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\DefaultController::indexAction',));
