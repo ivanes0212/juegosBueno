@@ -7,16 +7,16 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::base.html.twig");
+        $this->parent = $this->env->loadTemplate("uniJuegosBundle::layout.html.twig");
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'cuerpo' => array($this, 'block_cuerpo'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "uniJuegosBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -24,88 +24,46 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
-    public function block_body($context, array $blocks = array())
+    // line 4
+    public function block_cuerpo($context, array $blocks = array())
     {
-        // line 4
+        // line 5
         echo "<h1>juegos list</h1>
 
     <table class=\"records_list\">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titulojue</th>
-                <th>Descjue</th>
-                <th>Compjue</th>
-                <th>Fotojue</th>
-                <th>Iconojue</th>
-                <th>Actions</th>
-            </tr>
+           
         </thead>
         <tbody>
         ";
-        // line 19
+        // line 12
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 20
-            echo "            <tr>
-                <td><a href=\"";
-            // line 21
+            // line 13
+            echo "        <text align=\"center\">
+        <a href=\"";
+            // line 14
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
-            echo "</a></td>
-                <td>";
-            // line 22
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "tituloJue"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descJue"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "compJue"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoJue"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "iconoJue"), "html", null, true);
-            echo "</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">show</a>
-                    </li>
-                    <li>
-                        <a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("bundles/uniproyecto/imagenes/" . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoJue")) . "")), "html", null, true);
+            echo "\" width=10% height=10%/></a>
+        </text>
+             
+            
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 19
         echo "        </tbody>
     </table>
 
         <ul>
         <li>
             <a href=\"";
-        // line 44
+        // line 24
         echo $this->env->getExtension('routing')->getPath("juegos_new");
         echo "\">
                 Create a new entry
@@ -127,6 +85,6 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
 
     public function getDebugInfo()
     {
-        return array (  109 => 44,  102 => 39,  90 => 33,  84 => 30,  77 => 26,  73 => 25,  69 => 24,  65 => 23,  61 => 22,  55 => 21,  52 => 20,  48 => 19,  31 => 4,  28 => 3,);
+        return array (  67 => 24,  60 => 19,  47 => 14,  44 => 13,  40 => 12,  31 => 5,  28 => 4,);
     }
 }

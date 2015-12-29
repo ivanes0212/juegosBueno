@@ -1,34 +1,24 @@
-{% extends '::base.html.twig' %}
+{% extends 'uniJuegosBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>juegos</h1>
 
+{% block cuerpo -%}
+    
     <table class="record_properties">
         <tbody>
+           
             <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
+               
+                <td><h1><center><img src="{{ asset('bundles/uniproyecto/imagenes/'~ entity.fotoJue  ~ '') }}" width=30px height=30px/>{{ entity.tituloJue }}</h1></center></td>
             </tr>
+             
             <tr>
-                <th>Titulojue</th>
-                <td>{{ entity.tituloJue }}</td>
-            </tr>
-            <tr>
-                <th>Descjue</th>
+                
                 <td>{{ entity.descJue }}</td>
             </tr>
-            <tr>
-                <th>Compjue</th>
-                <td>{{ entity.compJue }}</td>
-            </tr>
-            <tr>
-                <th>Fotojue</th>
-                <td>{{ entity.fotoJue }}</td>
-            </tr>
-            <tr>
-                <th>Iconojue</th>
-                <td>{{ entity.iconoJue }}</td>
-            </tr>
+           <tr>
+                <td><div align="right"><i>{{ entity.compJue }}</i></div></td>
+            </tr> 
+            
         </tbody>
     </table>
 

@@ -1,40 +1,20 @@
-{% extends '::base.html.twig' %}
+{% extends 'uniJuegosBundle::layout.html.twig' %}
 
-{% block body -%}
+
+{% block cuerpo -%}
     <h1>juegos list</h1>
 
     <table class="records_list">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titulojue</th>
-                <th>Descjue</th>
-                <th>Compjue</th>
-                <th>Fotojue</th>
-                <th>Iconojue</th>
-                <th>Actions</th>
-            </tr>
+           
         </thead>
         <tbody>
         {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('juegos_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.tituloJue }}</td>
-                <td>{{ entity.descJue }}</td>
-                <td>{{ entity.compJue }}</td>
-                <td>{{ entity.fotoJue }}</td>
-                <td>{{ entity.iconoJue }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('juegos_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('juegos_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+        <text align="center">
+        <a href="{{ path('juegos_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/uniproyecto/imagenes/'~ entity.fotoJue  ~ '') }}" width=10% height=10%/></a>
+        </text>
+             
+            
         {% endfor %}
         </tbody>
     </table>

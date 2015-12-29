@@ -12,8 +12,9 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'body' => array($this, 'block_body'),
-            'javascripts' => array($this, 'block_javascripts'),
+            'cabecera' => array($this, 'block_cabecera'),
+            'cuerpo' => array($this, 'block_cuerpo'),
+            'pie' => array($this, 'block_pie'),
         );
     }
 
@@ -31,20 +32,33 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 7
+        // line 9
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
-        ";
-        // line 10
-        $this->displayBlock('body', $context, $blocks);
-        // line 11
-        echo "        ";
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 12
-        echo "    </body>
+        <div id=\"cabecera\">
+            ";
+        // line 13
+        $this->displayBlock('cabecera', $context, $blocks);
+        // line 16
+        echo "        </div>
+       
+         <div id=\"cuerpo\">
+            ";
+        // line 19
+        $this->displayBlock('cuerpo', $context, $blocks);
+        // line 20
+        echo "        </div>
+        
+         <div id=\"pie\">
+            ";
+        // line 23
+        $this->displayBlock('pie', $context, $blocks);
+        // line 26
+        echo "        </div>
+    </body>
 </html>
 ";
     }
@@ -58,16 +72,32 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
+        // line 7
+        echo "            <link href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/unijuegos/css/fuente.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\" />
+        ";
     }
 
-    // line 10
-    public function block_body($context, array $blocks = array())
+    // line 13
+    public function block_cabecera($context, array $blocks = array())
+    {
+        // line 14
+        echo "                <h1><font color=\"#CBCBFD\">VideoJuegos</font></h1>
+            ";
+    }
+
+    // line 19
+    public function block_cuerpo($context, array $blocks = array())
     {
     }
 
-    // line 11
-    public function block_javascripts($context, array $blocks = array())
+    // line 23
+    public function block_pie($context, array $blocks = array())
     {
+        // line 24
+        echo "                <font color=\"#CBCBFD\">By IVAN</font>
+            ";
     }
 
     public function getTemplateName()
@@ -82,6 +112,6 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
 
     public function getDebugInfo()
     {
-        return array (  64 => 10,  59 => 6,  53 => 5,  47 => 12,  44 => 11,  42 => 10,  35 => 7,  33 => 6,  29 => 5,  23 => 1,  109 => 44,  102 => 39,  90 => 33,  84 => 30,  77 => 26,  73 => 25,  69 => 11,  65 => 23,  61 => 22,  55 => 21,  52 => 20,  48 => 19,  31 => 4,  28 => 3,);
+        return array (  99 => 24,  96 => 23,  91 => 19,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  58 => 23,  53 => 20,  51 => 19,  46 => 16,  36 => 9,  30 => 5,  24 => 1,  85 => 23,  82 => 22,  77 => 17,  74 => 16,  68 => 10,  65 => 9,  56 => 26,  54 => 22,  49 => 19,  42 => 13,  34 => 6,  67 => 5,  60 => 26,  47 => 16,  44 => 13,  40 => 9,  31 => 4,  28 => 4,);
     }
 }
