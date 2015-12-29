@@ -1,0 +1,4 @@
+services:
+#    uni_juegos.example:
+#        class: uniJuegos\Bundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
