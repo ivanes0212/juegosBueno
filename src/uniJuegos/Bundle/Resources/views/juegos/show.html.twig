@@ -8,17 +8,33 @@
            
             <tr>
                
-                <td><h1><center><img src="{{ asset('bundles/uniproyecto/imagenes/'~ entity.fotoJue  ~ '') }}" width=30px height=30px/>{{ entity.tituloJue }}</h1></center></td>
+                <td><center><h1>{{ entity.tituloJue }}</h1></center></td>
             </tr>
              
             <tr>
                 
                 <td>{{ entity.descJue }}</td>
             </tr>
-           <tr>
-                <td><div align="right"><i>{{ entity.compJue }}</i></div></td>
-            </tr> 
-            
+              
+            <tr>
+                <td>
+                    <center><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoJue  ~ '') }}" width=700px height=400px/>
+                </td>   
+            </tr>
+            <tr>
+                <td><div align="right">Desarrolladora -><i>{{ entity.compJue }}</i></div></td>
+            </tr>
+            <tr>
+                    <td><div align="right">Categoria -> 
+            {% for cat in entity.catjues %}
+                
+                    <a href="{{ path('categorias_show', { 'id': cat.id }) }}">{{ cat.nombreCat }}</a>                       
+                     
+            {% endfor %} 
+                        </div>
+                    </td>  
+            </tr>
+           
         </tbody>
     </table>
 

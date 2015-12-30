@@ -7,16 +7,16 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::base.html.twig");
+        $this->parent = $this->env->loadTemplate("uniJuegosBundle::layout.html.twig");
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'cuerpo' => array($this, 'block_cuerpo'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "uniJuegosBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -24,10 +24,10 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
-    public function block_body($context, array $blocks = array())
+    // line 4
+    public function block_cuerpo($context, array $blocks = array())
     {
-        // line 4
+        // line 5
         echo "<h1>plataforma</h1>
 
     <table class=\"record_properties\">
@@ -35,14 +35,14 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
             <tr>
                 <th>Id</th>
                 <td>";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Nombreplat</th>
                 <td>";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombrePlat"), "html", null, true);
         echo "</td>
             </tr>
@@ -52,7 +52,7 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 21
+        // line 22
         echo $this->env->getExtension('routing')->getPath("plataforma");
         echo "\">
             Back to the list
@@ -60,14 +60,14 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
     </li>
     <li>
         <a href=\"";
-        // line 26
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("plataforma_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 30
+        // line 31
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -86,6 +86,6 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
 
     public function getDebugInfo()
     {
-        return array (  71 => 30,  64 => 26,  56 => 21,  46 => 14,  39 => 10,  31 => 4,  28 => 3,);
+        return array (  71 => 31,  64 => 27,  56 => 22,  46 => 15,  39 => 11,  31 => 5,  28 => 4,);
     }
 }

@@ -2,7 +2,7 @@
 
 
 {% block cuerpo -%}
-    <h1>juegos list</h1>
+    <center><h1>Juegos</h1></center>
 
     <table class="records_list">
         <thead>
@@ -11,7 +11,7 @@
         <tbody>
         {% for entity in entities %}
         <text align="center">
-        <a href="{{ path('juegos_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/uniproyecto/imagenes/'~ entity.fotoJue  ~ '') }}" width=10% height=10%/></a>
+        <a href="{{ path('juegos_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.iconoJue  ~ '') }}" width=250px height=250px/></a>
         </text>
              
             

@@ -23,6 +23,7 @@ class juegosType extends AbstractType
             ->add('juecat')
             ->add('jueplat')
             ->add('juenots')
+            
         ;
     }
     

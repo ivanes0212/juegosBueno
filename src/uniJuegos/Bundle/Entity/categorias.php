@@ -32,7 +32,7 @@ class categorias
     /**
      * @var string
      *
-     * @ORM\Column(name="descCat", type="string", length=50)
+     * @ORM\Column(name="descCat", type="text")
      */
     private $descCat;
 

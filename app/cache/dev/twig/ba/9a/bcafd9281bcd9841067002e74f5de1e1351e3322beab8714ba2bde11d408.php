@@ -7,16 +7,16 @@ class __TwigTemplate_ba9abcafd9281bcd9841067002e74f5de1e1351e3322beab8714ba2bde1
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::base.html.twig");
+        $this->parent = $this->env->loadTemplate("uniJuegosBundle::layout.html.twig");
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'cuerpo' => array($this, 'block_cuerpo'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "uniJuegosBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -24,21 +24,21 @@ class __TwigTemplate_ba9abcafd9281bcd9841067002e74f5de1e1351e3322beab8714ba2bde1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
-    public function block_body($context, array $blocks = array())
+    // line 4
+    public function block_cuerpo($context, array $blocks = array())
     {
-        // line 4
+        // line 5
         echo "<h1>categorias creation</h1>
 
     ";
-        // line 6
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
 
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 10
+        // line 11
         echo $this->env->getExtension('routing')->getPath("categorias");
         echo "\">
             Back to the list
@@ -60,6 +60,6 @@ class __TwigTemplate_ba9abcafd9281bcd9841067002e74f5de1e1351e3322beab8714ba2bde1
 
     public function getDebugInfo()
     {
-        return array (  42 => 10,  35 => 6,  31 => 4,  28 => 3,);
+        return array (  42 => 11,  35 => 7,  31 => 5,  28 => 4,);
     }
 }

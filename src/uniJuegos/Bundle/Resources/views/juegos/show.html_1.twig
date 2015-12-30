@@ -1,0 +1,49 @@
+{% extends 'uniJuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    
+    <table class="record_properties">
+        <tbody>
+           
+            <tr>
+               
+                <td><h1>{{ entity.tituloJue }}</h1></center></td>
+            </tr>
+             
+            <tr>
+                
+                <td>{{ entity.descJue }}</td>
+            </tr>
+            {% for cat in entity.juecat %}
+            <tr>
+                <td>
+                    <a>{{ cat.nombreCat }}</a>                       
+                </td>  
+            </tr>   
+            {% endfor %} 
+            <tr>
+                <td>
+                    <center><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoJue  ~ '') }}" width=700px height=400px/>
+                </td>   
+            </tr>
+            <tr>
+                <td><div align="right"><i>{{ entity.compJue }}</i></div></td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('juegos') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('juegos_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
