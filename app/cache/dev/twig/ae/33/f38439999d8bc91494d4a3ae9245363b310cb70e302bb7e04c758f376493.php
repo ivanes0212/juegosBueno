@@ -28,74 +28,43 @@ class __TwigTemplate_ae33f38439999d8bc91494d4a3ae9245363b310cb70e302bb7e04c758f3
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<h1>noticias list</h1>
+        echo "<center><h1>Noticias</h1></center>
 
-    <table class=\"records_list\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titulonot</th>
-                <th>Textonot</th>
-                <th>Fotonot</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    
+       
         ";
-        // line 18
+        // line 9
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 19
-            echo "            <tr>
-                <td><a href=\"";
-            // line 20
+            // line 10
+            echo "            
+            <h3>
+                <a href=\"";
+            // line 12
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("noticias_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
-            echo "</a></td>
-                <td>";
-            // line 21
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "tituloNot"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 22
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "textoNot"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoNot"), "html", null, true);
-            echo "</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href=\"";
-            // line 27
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("noticias_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">show</a>
-                    </li>
-                    <li>
-                        <a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("noticias_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+            echo "</a>
+            </h3>    
+                
+                <img src=\"";
+            // line 15
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("bundles/unijuegos/imagenes/" . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoNot")) . "")), "html", null, true);
+            echo "\" width=350px height=200px/>
+            
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
-        echo "        </tbody>
-    </table>
+        // line 18
+        echo "      
 
         <ul>
         <li>
             <a href=\"";
-        // line 41
+        // line 22
         echo $this->env->getExtension('routing')->getPath("noticias_new");
         echo "\">
                 Create a new entry
@@ -117,6 +86,6 @@ class __TwigTemplate_ae33f38439999d8bc91494d4a3ae9245363b310cb70e302bb7e04c758f3
 
     public function getDebugInfo()
     {
-        return array (  99 => 41,  92 => 36,  80 => 30,  74 => 27,  67 => 23,  63 => 22,  59 => 21,  53 => 20,  50 => 19,  46 => 18,  31 => 5,  28 => 4,);
+        return array (  68 => 22,  62 => 18,  53 => 15,  45 => 12,  41 => 10,  37 => 9,  31 => 5,  28 => 4,);
     }
 }

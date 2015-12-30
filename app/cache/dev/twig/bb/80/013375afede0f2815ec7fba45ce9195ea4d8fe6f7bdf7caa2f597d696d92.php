@@ -28,38 +28,51 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<h1>categorias</h1>
+        echo "<h1>";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombreCat"), "html", null, true);
+        echo "</h1>
 
     <table class=\"record_properties\">
         <tbody>
             <tr>
-                <th>Id</th>
                 <td>";
-        // line 11
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Nombrecat</th>
-                <td>";
-        // line 15
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombreCat"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Desccat</th>
-                <td>";
-        // line 19
+        // line 10
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descCat"), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <td>
+                    <div align=\"right\"><h4><u>Juegos: </u> </h4>
+                    
+                 ";
+        // line 16
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "catjues"));
+        foreach ($context['_seq'] as $context["_key"] => $context["jue"]) {
+            // line 17
+            echo "            
+                 <a href=\"";
+            // line 18
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_show", array("id" => $this->getAttribute((isset($context["jue"]) ? $context["jue"] : $this->getContext($context, "jue")), "id"))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["jue"]) ? $context["jue"] : $this->getContext($context, "jue")), "tituloJue"), "html", null, true);
+            echo "</a>
+                     <br>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jue'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 20
+        echo "  
+                 </div>
         </tbody>
     </table>
 
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 26
+        // line 27
         echo $this->env->getExtension('routing')->getPath("categorias");
         echo "\">
             Back to the list
@@ -67,14 +80,14 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
     </li>
     <li>
         <a href=\"";
-        // line 31
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("categorias_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 35
+        // line 36
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -93,6 +106,6 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
 
     public function getDebugInfo()
     {
-        return array (  78 => 35,  71 => 31,  63 => 26,  53 => 19,  46 => 15,  39 => 11,  31 => 5,  28 => 4,);
+        return array (  91 => 36,  84 => 32,  76 => 27,  67 => 20,  56 => 18,  53 => 17,  49 => 16,  40 => 10,  31 => 5,  28 => 4,);
     }
 }

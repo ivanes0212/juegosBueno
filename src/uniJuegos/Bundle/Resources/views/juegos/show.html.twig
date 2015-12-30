@@ -26,17 +26,25 @@
             </tr>
             <tr>
                     <td><div align="right">Categoria -> 
-            {% for cat in entity.catjues %}
+            
                 
-                    <a href="{{ path('categorias_show', { 'id': cat.id }) }}">{{ cat.nombreCat }}</a>                       
+                    {{ entity.juecat.nombreCat }}                      
                      
-            {% endfor %} 
+                    </td>
                         </div>
-                    </td>  
             </tr>
-           
-        </tbody>
+            </tbody>
     </table>
+            
+                    <div align="left"><h4><u>Noicias relacionadas </u> </h4>
+                    
+                 {% for noti in entity.juenots %}
+            
+                 <a href="{{ path('noticias_show', { 'id': noti.id }) }}">{{ noti.tituloNot }}</a>
+                     <br>
+             {% endfor %}  
+                 </div>
+                 <br><br>
 
         <ul class="record_actions">
     <li>

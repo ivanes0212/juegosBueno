@@ -2,22 +2,23 @@
 
 
 {% block cuerpo -%}
-    <h1>categorias</h1>
+    <h1>{{ entity.nombreCat }}</h1>
 
     <table class="record_properties">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Nombrecat</th>
-                <td>{{ entity.nombreCat }}</td>
-            </tr>
-            <tr>
-                <th>Desccat</th>
                 <td>{{ entity.descCat }}</td>
             </tr>
+            <tr>
+                <td>
+                    <div align="right"><h4><u>Juegos: </u> </h4>
+                    
+                 {% for jue in entity.catjues %}
+            
+                 <a href="{{ path('juegos_show', { 'id': jue.id }) }}">{{ jue.tituloJue }}</a>
+                     <br>
+             {% endfor %}  
+                 </div>
         </tbody>
     </table>
 
