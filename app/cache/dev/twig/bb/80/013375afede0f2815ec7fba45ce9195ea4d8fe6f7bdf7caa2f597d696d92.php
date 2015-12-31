@@ -28,20 +28,20 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<h1>";
+        echo "<center><h1>";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombreCat"), "html", null, true);
-        echo "</h1>
+        echo "</h1></center>
 
-    <table class=\"record_properties\">
-        <tbody>
-            <tr>
-                <td>";
-        // line 10
+    
+                   <div id=\"texto\">
+                   ";
+        // line 9
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descCat"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <td>
+        echo "
+                   </div>
+              
+            
+                
                     <div align=\"right\"><h4><u>Juegos: </u> </h4>
                     
                  ";
@@ -66,13 +66,12 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
         // line 20
         echo "  
                  </div>
-        </tbody>
-    </table>
+       
 
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 27
+        // line 26
         echo $this->env->getExtension('routing')->getPath("categorias");
         echo "\">
             Back to the list
@@ -80,14 +79,14 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
     </li>
     <li>
         <a href=\"";
-        // line 32
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("categorias_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 36
+        // line 35
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -106,6 +105,6 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
 
     public function getDebugInfo()
     {
-        return array (  91 => 36,  84 => 32,  76 => 27,  67 => 20,  56 => 18,  53 => 17,  49 => 16,  40 => 10,  31 => 5,  28 => 4,);
+        return array (  90 => 35,  83 => 31,  75 => 26,  67 => 20,  56 => 18,  53 => 17,  49 => 16,  39 => 9,  31 => 5,  28 => 4,);
     }
 }

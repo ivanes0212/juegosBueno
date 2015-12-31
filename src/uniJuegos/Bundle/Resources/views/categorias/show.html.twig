@@ -2,15 +2,15 @@
 
 
 {% block cuerpo -%}
-    <h1>{{ entity.nombreCat }}</h1>
+    <center><h1>{{ entity.nombreCat }}</h1></center>
 
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <td>{{ entity.descCat }}</td>
-            </tr>
-            <tr>
-                <td>
+    
+                   <div id="texto">
+                   {{ entity.descCat }}
+                   </div>
+              
+            
+                
                     <div align="right"><h4><u>Juegos: </u> </h4>
                     
                  {% for jue in entity.catjues %}
@@ -19,8 +19,7 @@
                      <br>
              {% endfor %}  
                  </div>
-        </tbody>
-    </table>
+       
 
         <ul class="record_actions">
     <li>

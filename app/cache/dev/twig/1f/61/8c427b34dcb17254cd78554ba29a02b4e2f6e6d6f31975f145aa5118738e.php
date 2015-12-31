@@ -28,64 +28,42 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<h1>plataforma list</h1>
+        echo "<center><h1>Plataformas</h1></center>
 
     <table class=\"records_list\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombreplat</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
+        
         <tbody>
         ";
-        // line 16
+        // line 10
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 17
+            // line 11
             echo "            <tr>
-                <td><a href=\"";
-            // line 18
+                <td>
+                    
+                    <a href=\"";
+            // line 14
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("plataforma_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
-            echo "</a></td>
-                <td>";
-            // line 19
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombrePlat"), "html", null, true);
-            echo "</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("plataforma_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">show</a>
-                    </li>
-                    <li>
-                        <a href=\"";
-            // line 26
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("plataforma_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">edit</a>
-                    </li>
-                </ul>
+            echo "</a>
                 </td>
-            </tr>
+                
+                </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 19
         echo "        </tbody>
     </table>
 
         <ul>
         <li>
             <a href=\"";
-        // line 37
+        // line 24
         echo $this->env->getExtension('routing')->getPath("plataforma_new");
         echo "\">
                 Create a new entry
@@ -107,6 +85,6 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
 
     public function getDebugInfo()
     {
-        return array (  89 => 37,  82 => 32,  70 => 26,  64 => 23,  57 => 19,  51 => 18,  48 => 17,  44 => 16,  31 => 5,  28 => 4,);
+        return array (  67 => 24,  60 => 19,  47 => 14,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
     }
 }

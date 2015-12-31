@@ -28,25 +28,37 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<h1>plataforma</h1>
+        echo "<h1>";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombrePlat"), "html", null, true);
+        echo "</h1>
 
     <table class=\"record_properties\">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
+        
+                  <div align=\"left\"><h4><u>Juegos en estas plataformas</u> </h4>
+                    
+                 ";
         // line 11
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Nombreplat</th>
-                <td>";
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "platjue"));
+        foreach ($context['_seq'] as $context["_key"] => $context["plats"]) {
+            // line 12
+            echo "            
+                 <a href=\"";
+            // line 13
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_show", array("id" => $this->getAttribute((isset($context["plats"]) ? $context["plats"] : $this->getContext($context, "plats")), "id"))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["plats"]) ? $context["plats"] : $this->getContext($context, "plats")), "tituloJue"), "html", null, true);
+            echo "</a>
+                     <br>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['plats'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 15
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombrePlat"), "html", null, true);
-        echo "</td>
-            </tr>
-        </tbody>
+        echo "  
+                 </div>
+       
     </table>
 
         <ul class=\"record_actions\">
@@ -86,6 +98,6 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
 
     public function getDebugInfo()
     {
-        return array (  71 => 31,  64 => 27,  56 => 22,  46 => 15,  39 => 11,  31 => 5,  28 => 4,);
+        return array (  83 => 31,  76 => 27,  68 => 22,  59 => 15,  48 => 13,  45 => 12,  41 => 11,  31 => 5,  28 => 4,);
     }
 }
