@@ -3,49 +3,56 @@
 
 {% block cuerpo -%}
     
-    <table class="record_properties">
-        <tbody>
-           
-            <tr>
+    
                
-                <td><center><h1>{{ entity.tituloJue }}</h1></center></td>
-            </tr>
-             
-            <tr>
-                
-                <td>{{ entity.descJue }}</td>
-            </tr>
-              
-            <tr>
-                <td>
+                <center><h1>{{ entity.tituloJue }}</h1></center>
+                         
+            
+                <div id="texto">
+                {{ entity.descJue }}
+                </div>
+                <br>
+            
                     <center><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoJue  ~ '') }}" width=700px height=400px/>
-                </td>   
-            </tr>
-            <tr>
-                <td><div align="right">Desarrolladora -><i>{{ entity.compJue }}</i></div></td>
-            </tr>
-            <tr>
-                    <td><div align="right">Categoria -> 
+                
+            <div id="notas">
+                    Desarrolladora ->
+                     
+                     <i>{{ entity.compJue }}</i>
+                     
+                     <br>
+            
+                    Categoria -> 
             
                 
                     {{ entity.juecat.nombreCat }}                      
                      
-                    </td>
-                        </div>
-            </tr>
-            </tbody>
-    </table>
+                    <br>
+                        
+                    
+                    Plataformas -> 
+                    {% for plat in entity.jueplat %}
+                
+                        -{{ plat.nombrePlat }}<br>
+                    {% endfor %}
+                     
+                    
             
-                    <div align="left"><h4><u>Noicias relacionadas </u> </h4>
+            </div>
+            
+            
+                    <div id="noti"><h4><u>Noicias relacionadas </u></h4>
                     
                  {% for noti in entity.juenots %}
             
                  <a href="{{ path('noticias_show', { 'id': noti.id }) }}">{{ noti.tituloNot }}</a>
                      <br>
-             {% endfor %}  
-                 </div>
-                 <br><br>
-
+                 {% endfor %}  
+                    </div>
+                 <br>
+   
+                 
+<div id="edit">
         <ul class="record_actions">
     <li>
         <a href="{{ path('juegos') }}">
@@ -59,4 +66,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+    </div>
 {% endblock %}

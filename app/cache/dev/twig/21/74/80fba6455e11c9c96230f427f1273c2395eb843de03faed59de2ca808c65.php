@@ -50,7 +50,7 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["plats"]) ? $context["plats"] : $this->getContext($context, "plats")), "tituloJue"), "html", null, true);
             echo "</a>
                      <br>
-             ";
+                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['plats'], $context['_parent'], $context['loop']);

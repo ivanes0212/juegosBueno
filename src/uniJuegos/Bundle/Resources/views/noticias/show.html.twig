@@ -4,21 +4,18 @@
 {% block cuerpo -%}
     <center><h1>{{ entity.tituloNot }}</h1></center>
 
-    <table class="record_properties">
-        <tbody>
-                       
-            <tr>
+    
+       
+                <div id="texto">
+                {{ entity.textoNot }}
+                </div>
+                <br>
                 
-                <td>{{ entity.textoNot }}</td>
-            </tr>
-            <tr>
-                
-                <td><center><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoNot  ~ '') }}" width=500px height=300px/></center></td>
-            </tr>
+                <center><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoNot  ~ '') }}" width=500px height=300px/></center>
+           
               
-        </tbody>
-    </table>
-
+      
+<div id="edit">
         <ul class="record_actions">
     <li>
         <a href="{{ path('noticias') }}">
@@ -32,4 +29,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+</div>
 {% endblock %}

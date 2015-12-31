@@ -1,0 +1,30 @@
+maquina:
+    path:     /
+    defaults: { _controller: "uniJuegosBundle:maquina:index" }
+
+maquina_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniJuegosBundle:maquina:show" }
+
+maquina_new:
+    path:     /new
+    defaults: { _controller: "uniJuegosBundle:maquina:new" }
+
+maquina_create:
+    path:     /create
+    defaults: { _controller: "uniJuegosBundle:maquina:create" }
+    requirements: { _method: post }
+
+maquina_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniJuegosBundle:maquina:edit" }
+
+maquina_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniJuegosBundle:maquina:update" }
+    requirements: { _method: post|put }
+
+maquina_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniJuegosBundle:maquina:delete" }
+    requirements: { _method: post|delete }

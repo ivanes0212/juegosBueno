@@ -9,6 +9,27 @@
 #pie{
     background-color: #070737;
 }
-
+#notas{
+    color: white;
+    margin-left: 80%;
+    background-color: #8F8686;
+    text-align: justify;
     
-
+    
+}
+#texto{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+#noti{
+    
+    text-align: left;
+    margin-left: 3%;
+    }
+#edit{
+    color: #DCD0D0;
+    text-align: left;
+    margin-left: 85%;
+    font-size: 90%;
+    }

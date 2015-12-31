@@ -1,10 +1,10 @@
-uni_juegos_noticias:
-    resource: "@uniJuegosBundle/Resources/config/routing/noticias.yml"
-    prefix:   /noticias
-
 uni_juegos_plataforma:
     resource: "@uniJuegosBundle/Resources/config/routing/plataforma.yml"
     prefix:   /plataforma
+
+uni_juegos_noticias:
+    resource: "@uniJuegosBundle/Resources/config/routing/noticias.yml"
+    prefix:   /noticias
 
 uni_juegos_juegos:
     resource: "@uniJuegosBundle/Resources/config/routing/juegos.yml"

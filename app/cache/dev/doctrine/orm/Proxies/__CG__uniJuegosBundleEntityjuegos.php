@@ -64,10 +64,10 @@ class juegos extends \uniJuegos\Bundle\Entity\juegos implements \Doctrine\ORM\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'id', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'tituloJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'descJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'compJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'fotoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'iconoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juecat', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'jueplat', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juenots');
+            return array('__isInitialized__', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'id', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'tituloJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'descJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'compJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'fotoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'iconoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juecat', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juenots', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'jueplat');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'id', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'tituloJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'descJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'compJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'fotoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'iconoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juecat', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'jueplat', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juenots');
+        return array('__isInitialized__', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'id', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'tituloJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'descJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'compJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'fotoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'iconoJue', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juecat', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'juenots', '' . "\0" . 'uniJuegos\\Bundle\\Entity\\juegos' . "\0" . 'jueplat');
     }
 
     /**
@@ -334,39 +334,6 @@ class juegos extends \uniJuegos\Bundle\Entity\juegos implements \Doctrine\ORM\Pr
     /**
      * {@inheritDoc}
      */
-    public function addJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addJueplat', array($jueplat));
-
-        return parent::addJueplat($jueplat);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeJueplat', array($jueplat));
-
-        return parent::removeJueplat($jueplat);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getJueplat()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJueplat', array());
-
-        return parent::getJueplat();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function addJuenot(\uniJuegos\Bundle\Entity\noticias $juenots)
     {
 
@@ -395,6 +362,39 @@ class juegos extends \uniJuegos\Bundle\Entity\juegos implements \Doctrine\ORM\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJuenots', array());
 
         return parent::getJuenots();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addJueplat', array($jueplat));
+
+        return parent::addJueplat($jueplat);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeJueplat', array($jueplat));
+
+        return parent::removeJueplat($jueplat);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getJueplat()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJueplat', array());
+
+        return parent::getJueplat();
     }
 
 }

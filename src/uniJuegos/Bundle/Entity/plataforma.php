@@ -64,7 +64,7 @@ class plataforma
     }
     
     /**
-* @ORM\ManyToMany(targetEntity="juegos", mappedBy="jueplat")
+* @ORM\ManyToMany(targetEntity="juegos", inversedBy="jueplat")
 */
 
 private $platjue;
@@ -72,6 +72,7 @@ private $platjue;
 public function __construct() {
 $this->platjue = new ArrayCollection();
 }
+
 
     /**
      * Add platjue

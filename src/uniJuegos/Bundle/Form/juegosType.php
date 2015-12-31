@@ -21,8 +21,11 @@ class juegosType extends AbstractType
             ->add('fotoJue')
             ->add('iconoJue')
             ->add('juecat')
-            ->add('jueplat')
             ->add('juenots')
+            ->add('jueplat')
+            
+            
+            
             
         ;
     }

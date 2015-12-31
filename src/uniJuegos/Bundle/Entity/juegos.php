@@ -215,49 +215,14 @@ private $juecat;
      return $this->tituloJue;}
      
      
-           /**
-* @ORM\ManyToMany(targetEntity="plataforma", mappedBy="platjue")
-*/
-
-private $jueplat;
+           
 
 public function __construct() {
-$this->jueplat = new ArrayCollection();
 $this->juenots = new ArrayCollection();
+$this->jueplat = new ArrayCollection();
+
 }
 
-    /**
-     * Add jueplat
-     *
-     * @param \uniJuegos\Bundle\Entity\plataforma $jueplat
-     * @return juegos
-     */
-    public function addJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
-    {
-        $this->jueplat[] = $jueplat;
-
-        return $this;
-    }
-
-    /**
-     * Remove jueplat
-     *
-     * @param \uniJuegos\Bundle\Entity\plataforma $jueplat
-     */
-    public function removeJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
-    {
-        $this->jueplat->removeElement($jueplat);
-    }
-
-    /**
-     * Get jueplat
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getJueplat()
-    {
-        return $this->jueplat;
-    }
     
     /**
 * @ORM\OneToMany(targetEntity="noticias", mappedBy="notjue", cascade={"remove"})
@@ -296,5 +261,43 @@ private $juenots;
     public function getJuenots()
     {
         return $this->juenots;
+    }
+    /**
+* @ORM\ManyToMany(targetEntity="plataforma", mappedBy="platjue")
+*/
+
+private $jueplat;
+
+    /**
+     * Add jueplat
+     *
+     * @param \uniJuegos\Bundle\Entity\plataforma $jueplat
+     * @return juegos
+     */
+    public function addJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
+    {
+        $this->jueplat[] = $jueplat;
+
+        return $this;
+    }
+
+    /**
+     * Remove jueplat
+     *
+     * @param \uniJuegos\Bundle\Entity\plataforma $jueplat
+     */
+    public function removeJueplat(\uniJuegos\Bundle\Entity\plataforma $jueplat)
+    {
+        $this->jueplat->removeElement($jueplat);
+    }
+
+    /**
+     * Get jueplat
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getJueplat()
+    {
+        return $this->jueplat;
     }
 }
