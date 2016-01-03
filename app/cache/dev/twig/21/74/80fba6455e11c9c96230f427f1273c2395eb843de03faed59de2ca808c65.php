@@ -60,7 +60,7 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
                  </div>
        
     </table>
-
+<div id=\"edit\">
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
@@ -83,6 +83,7 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
+</div>
 ";
     }
 

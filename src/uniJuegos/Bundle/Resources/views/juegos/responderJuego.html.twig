@@ -1,0 +1,25 @@
+{% extends 'uniJuegosBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+   <h1>Listado de juegos con este titulo: {{tit}}:</h1>
+ <tbody>
+        {% for entity in tabla %}
+            
+            
+        <h2><a href="{{ path('juegos_show', { 'id': entity.id }) }}">{{ entity.tituloJue }}</a></h2>
+              
+        
+                
+               
+       
+                <img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.iconoJue  ~ '') }}" width=10% height=10%/>
+                <br>
+                <br>
+                
+                
+                
+                
+        {% endfor %}
+        
+    {% endblock %}

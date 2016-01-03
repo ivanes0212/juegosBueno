@@ -221,4 +221,29 @@ class juegosController extends Controller
             ->getForm()
         ;
     }
+    public function buscarJuegoAction()
+    {
+        
+        return $this->render('uniJuegosBundle:juegos:buscarJuego.html.twig');
+    }
+
+     public function responderJuegoAction(Request $res)
+    {
+     //     $titulo= $_POST['titulo']; // Coger variables usando php clásico.
+         $tit= $res->request->get('titulo'); // Modo symfony2
+         
+      $em = $this->getDoctrine()->getEntityManager();
+      
+      $dql = "select j from uniJuegosBundle:juegos j where j.tituloJue like :titulo";
+      $respuesta = $em->createQuery($dql);
+      $respuesta->setParameter('titulo',"%" . $tit . "%");
+      $juegos = $respuesta->getResult();
+     
+      
+        return $this->render('uniJuegosBundle:juegos:responderJuego.html.twig', array(
+            'tabla' => $juegos,
+            'tit'=> $tit,
+            
+        ));
+    }
 }

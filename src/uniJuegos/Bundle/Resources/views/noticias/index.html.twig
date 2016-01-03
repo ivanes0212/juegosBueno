@@ -5,7 +5,7 @@
     <center><h1>Noticias</h1></center>
 
     
-       
+    <div id="web">
         {% for entity in entities %}
             
             <h3>
@@ -13,9 +13,10 @@
             </h3>    
                 
                 <img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoNot  ~ '') }}" width=350px height=200px/>
-            
+                
         {% endfor %}
-      
+        
+    </div>
 
         <ul>
         <li>

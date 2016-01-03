@@ -12,6 +12,13 @@
         <div id="cabecera">
             {% block cabecera %}
                 <h1><font color="#CBCBFD">VideoJuegos</font></h1>
+                <ul id="nav">
+        <li id="nav-1"><a href="{{ path('juegos') }}">Juegos</a></li>
+	<li id="nav-2"><a href="{{ path('categorias') }}">Categorias</a></li>
+	<li id="nav-3"><a href="{{ path('plataforma') }}">Plataformas</a></li>
+        <li id="nav-4"><a href="{{ path('noticias') }}">Noticias</a></li>
+        <li id="nav-5"><a href="{{ path('juegos_buscar_juego') }}">Buscar Juego</a></li>
+</ul>
             {% endblock %}
         </div>
        

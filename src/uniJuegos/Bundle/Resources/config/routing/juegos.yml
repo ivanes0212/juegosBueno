@@ -28,3 +28,11 @@ juegos_delete:
     path:     /{id}/delete
     defaults: { _controller: "uniJuegosBundle:juegos:delete" }
     requirements: { _method: post|delete }
+juegos_buscar_juego:
+    path:     /buscarjuego
+    defaults: { _controller: "uniJuegosBundle:juegos:buscarJuego" }
+    
+juegos_responder_juego:
+    path:     /responderjuego
+    defaults: { _controller: "uniJuegosBundle:juegos:responderJuego" }
+    requirements: { _method: post|put }

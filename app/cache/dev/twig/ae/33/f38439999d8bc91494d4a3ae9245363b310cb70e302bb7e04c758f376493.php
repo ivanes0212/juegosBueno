@@ -31,7 +31,7 @@ class __TwigTemplate_ae33f38439999d8bc91494d4a3ae9245363b310cb70e302bb7e04c758f3
         echo "<center><h1>Noticias</h1></center>
 
     
-       
+    <div id=\"web\">
         ";
         // line 9
         $context['_parent'] = (array) $context;
@@ -52,19 +52,20 @@ class __TwigTemplate_ae33f38439999d8bc91494d4a3ae9245363b310cb70e302bb7e04c758f3
             // line 15
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("bundles/unijuegos/imagenes/" . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoNot")) . "")), "html", null, true);
             echo "\" width=350px height=200px/>
-            
+                
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 18
-        echo "      
+        echo "        
+    </div>
 
         <ul>
         <li>
             <a href=\"";
-        // line 22
+        // line 23
         echo $this->env->getExtension('routing')->getPath("noticias_new");
         echo "\">
                 Create a new entry
@@ -86,6 +87,6 @@ class __TwigTemplate_ae33f38439999d8bc91494d4a3ae9245363b310cb70e302bb7e04c758f3
 
     public function getDebugInfo()
     {
-        return array (  68 => 22,  62 => 18,  53 => 15,  45 => 12,  41 => 10,  37 => 9,  31 => 5,  28 => 4,);
+        return array (  69 => 23,  62 => 18,  53 => 15,  45 => 12,  41 => 10,  37 => 9,  31 => 5,  28 => 4,);
     }
 }

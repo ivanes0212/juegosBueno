@@ -42,21 +42,21 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
             ";
         // line 13
         $this->displayBlock('cabecera', $context, $blocks);
-        // line 16
+        // line 23
         echo "        </div>
        
          <div id=\"cuerpo\">
             ";
-        // line 19
+        // line 26
         $this->displayBlock('cuerpo', $context, $blocks);
-        // line 20
+        // line 27
         echo "        </div>
         
          <div id=\"pie\">
             ";
-        // line 23
+        // line 30
         $this->displayBlock('pie', $context, $blocks);
-        // line 26
+        // line 33
         echo "        </div>
     </body>
 </html>
@@ -84,18 +84,40 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
     {
         // line 14
         echo "                <h1><font color=\"#CBCBFD\">VideoJuegos</font></h1>
+                <ul id=\"nav\">
+        <li id=\"nav-1\"><a href=\"";
+        // line 16
+        echo $this->env->getExtension('routing')->getPath("juegos");
+        echo "\">Juegos</a></li>
+\t<li id=\"nav-2\"><a href=\"";
+        // line 17
+        echo $this->env->getExtension('routing')->getPath("categorias");
+        echo "\">Categorias</a></li>
+\t<li id=\"nav-3\"><a href=\"";
+        // line 18
+        echo $this->env->getExtension('routing')->getPath("plataforma");
+        echo "\">Plataformas</a></li>
+        <li id=\"nav-4\"><a href=\"";
+        // line 19
+        echo $this->env->getExtension('routing')->getPath("noticias");
+        echo "\">Noticias</a></li>
+        <li id=\"nav-5\"><a href=\"";
+        // line 20
+        echo $this->env->getExtension('routing')->getPath("juegos_buscar_juego");
+        echo "\">Buscar Juego</a></li>
+</ul>
             ";
     }
 
-    // line 19
+    // line 26
     public function block_cuerpo($context, array $blocks = array())
     {
     }
 
-    // line 23
+    // line 30
     public function block_pie($context, array $blocks = array())
     {
-        // line 24
+        // line 31
         echo "                <font color=\"#CBCBFD\">By IVAN</font>
             ";
     }
@@ -112,6 +134,6 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
 
     public function getDebugInfo()
     {
-        return array (  99 => 24,  96 => 23,  91 => 19,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  58 => 23,  53 => 20,  51 => 19,  46 => 16,  44 => 13,  36 => 9,  30 => 5,  24 => 1,  85 => 23,  82 => 22,  77 => 17,  74 => 16,  68 => 10,  65 => 9,  56 => 26,  54 => 22,  49 => 19,  40 => 9,  34 => 6,  67 => 5,  60 => 26,  47 => 16,  42 => 13,  38 => 10,  31 => 4,  28 => 4,);
+        return array (  121 => 31,  118 => 30,  113 => 26,  106 => 20,  102 => 19,  98 => 18,  94 => 17,  90 => 16,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 33,  58 => 30,  53 => 27,  51 => 26,  46 => 23,  44 => 13,  36 => 9,  34 => 6,  30 => 5,  24 => 1,);
     }
 }

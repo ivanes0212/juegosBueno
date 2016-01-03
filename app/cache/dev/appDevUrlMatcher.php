@@ -300,6 +300,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
             not_juegos_delete:
 
+            // juegos_buscar_juego
+            if ($pathinfo === '/juegos/buscarjuego') {
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::buscarJuegoAction',  '_route' => 'juegos_buscar_juego',);
+            }
+
+            // juegos_responder_juego
+            if ($pathinfo === '/juegos/responderjuego') {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_juegos_responder_juego;
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::responderJuegoAction',  '_route' => 'juegos_responder_juego',);
+            }
+            not_juegos_responder_juego:
+
         }
 
         if (0 === strpos($pathinfo, '/categorias')) {
