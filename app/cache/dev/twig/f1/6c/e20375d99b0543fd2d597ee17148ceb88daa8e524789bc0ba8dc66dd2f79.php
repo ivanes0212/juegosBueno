@@ -83,7 +83,9 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
     public function block_cabecera($context, array $blocks = array())
     {
         // line 14
-        echo "                <h1><font color=\"#CBCBFD\">VideoJuegos</font></h1>
+        echo "                <h1><font color=\"#CBCBFD\"><img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/unijuegos/imagenes/mando.png"), "html", null, true);
+        echo "\"width=40px height=40px>Games</font></h1>
                 <ul id=\"nav\">
         <li id=\"nav-1\"><a href=\"";
         // line 16
@@ -105,7 +107,7 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
         // line 20
         echo $this->env->getExtension('routing')->getPath("juegos_buscar_juego");
         echo "\">Buscar Juego</a></li>
-</ul>
+                </ul>
             ";
     }
 
@@ -134,6 +136,6 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
 
     public function getDebugInfo()
     {
-        return array (  121 => 31,  118 => 30,  113 => 26,  106 => 20,  102 => 19,  98 => 18,  94 => 17,  90 => 16,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 33,  58 => 30,  53 => 27,  51 => 26,  46 => 23,  44 => 13,  36 => 9,  34 => 6,  30 => 5,  24 => 1,);
+        return array (  123 => 31,  120 => 30,  115 => 26,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 33,  58 => 30,  53 => 27,  51 => 26,  46 => 23,  44 => 13,  36 => 9,  34 => 6,  30 => 5,  24 => 1,);
     }
 }

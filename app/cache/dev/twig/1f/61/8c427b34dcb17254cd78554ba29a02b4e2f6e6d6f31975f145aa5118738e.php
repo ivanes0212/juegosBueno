@@ -59,7 +59,7 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
         // line 19
         echo "        </tbody>
     </table>
-
+<div id=\"edit\">
         <ul>
         <li>
             <a href=\"";
@@ -70,6 +70,7 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
             </a>
         </li>
     </ul>
+</div>
     ";
     }
 

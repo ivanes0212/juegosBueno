@@ -58,7 +58,7 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
         echo "        
         </tbody>
     </table>
-
+<div id=\"edit\">
         <ul>
         <li>
             <a href=\"";
@@ -69,6 +69,7 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
             </a>
         </li>
     </ul>
+</div>
     ";
     }
 

@@ -5,9 +5,11 @@
 }
 #cuerpo{ 
     background-color: #CBCBFD;
+    clear: both;
 }
 #pie{
     background-color: #070737;
+    clear: both;
 }
 #notas{
     color: white;
@@ -37,6 +39,7 @@
     color: #DCD0D0;
     text-align: center;
     position: relative;
+    
     
     }
 #nav {
@@ -73,3 +76,54 @@
 	#nav a:hover {
 		color: #000;
 		}
+.col1{
+     position: relative;
+     float: left;
+     width: 25%;
+     height: 25%;
+     overflow: auto;
+     display: block;
+     margin-left: 350px;
+     }
+.col2{
+     position: relative;
+     float: left;
+     width: 25%;
+     height: 25%;
+     overflow: auto;
+     display: block;
+     margin-right: 250px;
+     margin-bottom: 0;
+     padding: 0;
+     }   
+.col3{
+     position: relative;
+     float: left;
+     width: 25%;
+     height: 25%;
+     overflow: auto;
+     display: block;
+     clear: both;
+     margin-left: 350px;
+     }
+.col4{
+     position: relative;
+     float: left;
+     clear: right;
+     width: 25%;
+     height: 25%;
+     overflow: auto;
+     display: block;
+     margin-right: 250px;
+     margin-bottom: 0;
+     padding: 0;
+     } 
+.col5{
+     position: relative;
+     width: 50%;
+     overflow: auto;
+     display: block;
+     margin-left: 350px;
+     margin-bottom: 0;
+     
+     }

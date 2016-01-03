@@ -5,19 +5,31 @@
     <center><h1>Noticias</h1></center>
 
     
-    <div id="web">
+    
         {% for entity in entities %}
-            
+            {% if loop.index <="4" %}
+            <div class="{{'col'~ loop.index}}">
             <h3>
                 <a href="{{ path('noticias_show', { 'id': entity.id }) }}">{{ entity.tituloNot }}</a>
             </h3>    
                 
-                <img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoNot  ~ '') }}" width=350px height=200px/>
+                <img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoNot  ~ '') }}" width=300px height=125px/>
+            </div>     
+            
+            {% elseif loop.index > "4" %}
+                <div class="col5">
+                    <br>
+                    <h3>
+                <a href="{{ path('noticias_show', { 'id': entity.id }) }}">{{ entity.tituloNot }}</a>
+            </h3>    
                 
+                <img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.fotoNot  ~ '') }}" width=300px height=125px/>
+                </div> 
+            {% endif %}    
         {% endfor %}
         
-    </div>
-
+    
+<div id="edit">
         <ul>
         <li>
             <a href="{{ path('noticias_new') }}">
@@ -25,4 +37,5 @@
             </a>
         </li>
     </ul>
+</div>
     {% endblock %}
