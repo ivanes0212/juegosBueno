@@ -28,41 +28,43 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<center><h1>Categorías</h1></center>
+        echo "<center><h2>Categorías</h2></center>
 
-    <table class=\"records_list\">
+    
        
-        <tbody>
+        
         ";
         // line 10
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
             // line 11
-            echo "            <tr>
-                <td><a href=\"";
-            // line 12
+            echo "            <div id=\"cate\">
+                <br>
+                <a href=\"";
+            // line 13
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("categorias_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombreCat"), "html", null, true);
-            echo "</a></td>
+            echo "</a>
                 
                 
-            </tr>
+                
+          
+            </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 20
         echo "        
-        </tbody>
-    </table>
+        
 <div id=\"edit\">
         <ul>
         <li>
             <a href=\"";
-        // line 23
+        // line 25
         echo $this->env->getExtension('routing')->getPath("categorias_new");
         echo "\">
                 Create a new entry
@@ -85,6 +87,6 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
 
     public function getDebugInfo()
     {
-        return array (  66 => 23,  58 => 17,  45 => 12,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
+        return array (  68 => 25,  61 => 20,  46 => 13,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
     }
 }

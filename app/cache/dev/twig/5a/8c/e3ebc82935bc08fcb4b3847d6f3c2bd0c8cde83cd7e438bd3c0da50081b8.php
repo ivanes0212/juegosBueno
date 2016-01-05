@@ -28,21 +28,23 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 8
-        echo "<center><h1>";
+        echo "<center><h2>";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "tituloJue"), "html", null, true);
-        echo "</h1></center>
+        echo "</h2></center>
                          
             
                 <div id=\"texto\">
+                    <br>
                 ";
-        // line 12
+        // line 13
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descJue"), "html", null, true);
         echo "
+                    <br><br>
                 </div>
                 <br>
             
                     <center><img src=\"";
-        // line 16
+        // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("bundles/unijuegos/imagenes/" . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoJue")) . "")), "html", null, true);
         echo "\" width=700px height=400px/>
                 
@@ -50,7 +52,7 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
                     Desarrolladora ->
                      
                      <i>";
-        // line 21
+        // line 23
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "compJue"), "html", null, true);
         echo "</i>
                      
@@ -60,7 +62,7 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
             
                 
                     ";
-        // line 28
+        // line 30
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "juecat"), "nombreCat"), "html", null, true);
         echo "                      
                      
@@ -69,14 +71,14 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
                     
                     Plataformas -> 
                     ";
-        // line 34
+        // line 36
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "jueplat"));
         foreach ($context['_seq'] as $context["_key"] => $context["plat"]) {
-            // line 35
+            // line 37
             echo "                
                         -";
-            // line 36
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["plat"]) ? $context["plat"] : $this->getContext($context, "plat")), "nombrePlat"), "html", null, true);
             echo "<br>
                     ";
@@ -84,7 +86,7 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['plat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 40
         echo "                     
                     
             
@@ -94,14 +96,14 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
                     <div id=\"noti\"><h4><u>Noicias relacionadas </u></h4>
                     
                  ";
-        // line 46
+        // line 48
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "juenots"));
         foreach ($context['_seq'] as $context["_key"] => $context["noti"]) {
-            // line 47
+            // line 49
             echo "            
                  <a href=\"";
-            // line 48
+            // line 50
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("noticias_show", array("id" => $this->getAttribute((isset($context["noti"]) ? $context["noti"] : $this->getContext($context, "noti")), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["noti"]) ? $context["noti"] : $this->getContext($context, "noti")), "tituloNot"), "html", null, true);
@@ -112,7 +114,7 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['noti'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
+        // line 52
         echo "  
                     </div>
                  <br>
@@ -122,7 +124,7 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 58
+        // line 60
         echo $this->env->getExtension('routing')->getPath("juegos");
         echo "\">
             Back to the list
@@ -130,14 +132,14 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
     </li>
     <li>
         <a href=\"";
-        // line 63
+        // line 65
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
             Edit
         </a>
     </li>
     <li>";
-        // line 67
+        // line 69
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -157,6 +159,6 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
 
     public function getDebugInfo()
     {
-        return array (  141 => 67,  134 => 63,  126 => 58,  116 => 50,  105 => 48,  102 => 47,  98 => 46,  88 => 38,  80 => 36,  77 => 35,  73 => 34,  64 => 28,  54 => 21,  46 => 16,  39 => 12,  31 => 8,  28 => 4,);
+        return array (  143 => 69,  136 => 65,  128 => 60,  118 => 52,  107 => 50,  104 => 49,  100 => 48,  90 => 40,  82 => 38,  79 => 37,  75 => 36,  66 => 30,  56 => 23,  48 => 18,  40 => 13,  31 => 8,  28 => 4,);
     }
 }

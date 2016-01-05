@@ -28,42 +28,40 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<center><h1>Plataformas</h1></center>
+        echo "<center><h2>Plataformas</h2></center>
 
-    <table class=\"records_list\">
+    
         
-        <tbody>
+        
         ";
         // line 10
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
             // line 11
-            echo "            <tr>
-                <td>
-                    
+            echo "           <div id=\"cate\">
+               <br>
                     <a href=\"";
-            // line 14
+            // line 13
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("plataforma_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombrePlat"), "html", null, true);
             echo "</a>
-                </td>
-                
-                </tr>
+               
+                    
+           </div>   
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
-        echo "        </tbody>
-    </table>
+        // line 18
+        echo "        
 <div id=\"edit\">
         <ul>
         <li>
             <a href=\"";
-        // line 24
+        // line 22
         echo $this->env->getExtension('routing')->getPath("plataforma_new");
         echo "\">
                 Create a new entry
@@ -86,6 +84,6 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
 
     public function getDebugInfo()
     {
-        return array (  67 => 24,  60 => 19,  47 => 14,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
+        return array (  65 => 22,  59 => 18,  46 => 13,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
     }
 }

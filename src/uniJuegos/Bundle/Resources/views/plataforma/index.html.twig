@@ -2,22 +2,20 @@
 
 
 {% block cuerpo -%}
-    <center><h1>Plataformas</h1></center>
+    <center><h2>Plataformas</h2></center>
 
-    <table class="records_list">
+    
         
-        <tbody>
+        
         {% for entity in entities %}
-            <tr>
-                <td>
-                    
+           <div id="cate">
+               <br>
                     <a href="{{ path('plataforma_show', { 'id': entity.id }) }}">{{ entity.nombrePlat }}</a>
-                </td>
-                
-                </tr>
+               
+                    
+           </div>   
         {% endfor %}
-        </tbody>
-    </table>
+        
 <div id="edit">
         <ul>
         <li>

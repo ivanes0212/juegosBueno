@@ -56,7 +56,7 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
             ";
         // line 30
         $this->displayBlock('pie', $context, $blocks);
-        // line 33
+        // line 39
         echo "        </div>
     </body>
 </html>
@@ -120,7 +120,13 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
     public function block_pie($context, array $blocks = array())
     {
         // line 31
-        echo "                <font color=\"#CBCBFD\">By IVAN</font>
+        echo "                <h6><font color=\"#CBCBFD\">
+                    CONTACTO -> ivanesfc@hotmail.com
+                    <br>
+                    SITIO WEB -> juegos.com
+                    <br>
+                    CENTRO -> uni Eibar-Ermua
+                    </font></h6>
             ";
     }
 
@@ -136,6 +142,6 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
 
     public function getDebugInfo()
     {
-        return array (  123 => 31,  120 => 30,  115 => 26,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 33,  58 => 30,  53 => 27,  51 => 26,  46 => 23,  44 => 13,  36 => 9,  34 => 6,  30 => 5,  24 => 1,);
+        return array (  123 => 31,  120 => 30,  115 => 26,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 39,  58 => 30,  53 => 27,  51 => 26,  46 => 23,  44 => 13,  36 => 9,  34 => 6,  30 => 5,  24 => 1,);
     }
 }

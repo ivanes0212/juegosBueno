@@ -2,21 +2,23 @@
 
 
 {% block cuerpo -%}
-    <center><h1>Categorías</h1></center>
+    <center><h2>Categorías</h2></center>
 
-    <table class="records_list">
+    
        
-        <tbody>
+        
         {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('categorias_show', { 'id': entity.id }) }}">{{ entity.nombreCat }}</a></td>
+            <div id="cate">
+                <br>
+                <a href="{{ path('categorias_show', { 'id': entity.id }) }}">{{ entity.nombreCat }}</a>
                 
                 
-            </tr>
+                
+          
+            </div>
         {% endfor %}
         
-        </tbody>
-    </table>
+        
 <div id="edit">
         <ul>
         <li>

@@ -2,16 +2,16 @@
 
 
 {% block cuerpo -%}
-    <h1>{{ entity.nombrePlat }}</h1>
+    <center><h2>{{ entity.nombrePlat }}</h2></center>
 
     <table class="record_properties">
         
-                  <div align="left"><h4><u>Juegos en estas plataformas</u> </h4>
+                  <div id="plat"><h2><u>Juegos en estas plataformas</u> </h2>
                     
                  {% for plats in entity.platjue %}
             
                  <a href="{{ path('juegos_show', { 'id': plats.id }) }}">{{ plats.tituloJue }}</a>
-                     <br>
+                 <br><br>
                  {% endfor %}  
                  </div>
        

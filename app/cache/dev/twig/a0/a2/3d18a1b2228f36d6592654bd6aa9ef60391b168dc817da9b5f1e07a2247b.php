@@ -28,7 +28,7 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<center><h1>Juegos</h1></center>
+        echo "<center><h2>Juegos</h2></center>
 
     <table class=\"records_list\">
         <thead>

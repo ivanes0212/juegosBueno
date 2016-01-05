@@ -3,6 +3,9 @@
     text-align: center;
 
 }
+h2{
+    background-color: #A9A9B6;
+}
 #cuerpo{ 
     background-color: #CBCBFD;
     clear: both;
@@ -10,24 +13,26 @@
 #pie{
     background-color: #070737;
     clear: both;
+    font-family: sans-serif;
 }
 #notas{
     color: white;
     margin-left: 80%;
     background-color: #8F8686;
     text-align: justify;
-    
-    
-}
+    margin-right: 3%;
+    }
 #texto{
+    background-color: #E6E6F5;
     margin-left: 10%;
     margin-right: 10%;
     text-align: justify;
 }
 #noti{
-    
+    background-color: #B4B4C6;
     text-align: left;
     margin-left: 3%;
+    margin-right: 70%;
     }
 #edit{
     color: #DCD0D0;
@@ -35,13 +40,22 @@
     margin-left: 85%;
     font-size: 90%;
     }
-#web{
-    color: #DCD0D0;
-    text-align: center;
+
+#plat{
+    background-color: #E6E6F5;
+    text-align: left;
+    margin-left: 35%;
+    margin-right: 35%;
     position: relative;
-    
-    
     }
+#cate{
+    background-color: #E6E6F5;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    position: relative;
+    font-family: sans-serif;
+}
 #nav {
 		float: left;
 		width: 100%;
@@ -77,6 +91,7 @@
 		color: #000;
 		}
 .col1{
+     background-color: #E6E6F5;
      position: relative;
      float: left;
      width: 25%;
@@ -84,8 +99,11 @@
      overflow: auto;
      display: block;
      margin-left: 350px;
+     text-align: center;
+     font-family:sans-serif;
      }
 .col2{
+     background-color: #E6E6F5;
      position: relative;
      float: left;
      width: 25%;
@@ -95,8 +113,11 @@
      margin-right: 250px;
      margin-bottom: 0;
      padding: 0;
+     text-align: center;
+     font-family:sans-serif;
      }   
 .col3{
+     background-color: #E6E6F5;
      position: relative;
      float: left;
      width: 25%;
@@ -105,8 +126,11 @@
      display: block;
      clear: both;
      margin-left: 350px;
+     text-align: center;
+     font-family:sans-serif;
      }
 .col4{
+     background-color: #E6E6F5;
      position: relative;
      float: left;
      clear: right;
@@ -117,13 +141,17 @@
      margin-right: 250px;
      margin-bottom: 0;
      padding: 0;
+     text-align: center;
+     font-family:sans-serif;
      } 
 .col5{
+     background-color: #E6E6F5;
      position: relative;
      width: 50%;
      overflow: auto;
      display: block;
      margin-left: 350px;
      margin-bottom: 0;
-     
+     font-family:sans-serif;
      }
+     

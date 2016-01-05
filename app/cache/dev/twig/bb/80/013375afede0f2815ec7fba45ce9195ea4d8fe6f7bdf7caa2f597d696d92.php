@@ -28,9 +28,9 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<center><h1>";
+        echo "<center><h2>";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombreCat"), "html", null, true);
-        echo "</h1></center>
+        echo "</h2></center>
 
     
                    <div id=\"texto\">

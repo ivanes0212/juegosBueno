@@ -28,7 +28,7 @@ class __TwigTemplate_ae33f38439999d8bc91494d4a3ae9245363b310cb70e302bb7e04c758f3
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<center><h1>Noticias</h1></center>
+        echo "<center><h2>Noticias</h2></center>
 
     
     

@@ -28,13 +28,13 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
     public function block_cuerpo($context, array $blocks = array())
     {
         // line 5
-        echo "<h1>";
+        echo "<center><h2>";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nombrePlat"), "html", null, true);
-        echo "</h1>
+        echo "</h2></center>
 
     <table class=\"record_properties\">
         
-                  <div align=\"left\"><h4><u>Juegos en estas plataformas</u> </h4>
+                  <div id=\"plat\"><h2><u>Juegos en estas plataformas</u> </h2>
                     
                  ";
         // line 11
@@ -49,7 +49,7 @@ class __TwigTemplate_217480fba6455e11c9c96230f427f1273c2395eb843de03faed59de2ca8
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["plats"]) ? $context["plats"] : $this->getContext($context, "plats")), "tituloJue"), "html", null, true);
             echo "</a>
-                     <br>
+                 <br><br>
                  ";
         }
         $_parent = $context['_parent'];
