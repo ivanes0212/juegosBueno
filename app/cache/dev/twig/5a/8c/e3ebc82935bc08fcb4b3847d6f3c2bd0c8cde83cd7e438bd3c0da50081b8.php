@@ -122,24 +122,17 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
                  
 <div id=\"edit\">
         <ul class=\"record_actions\">
+    
     <li>
         <a href=\"";
-        // line 60
-        echo $this->env->getExtension('routing')->getPath("juegos");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 65
+        // line 61
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
-            Edit
+            Editar
         </a>
     </li>
     <li>";
-        // line 69
+        // line 65
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
@@ -159,6 +152,6 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
 
     public function getDebugInfo()
     {
-        return array (  143 => 69,  136 => 65,  128 => 60,  118 => 52,  107 => 50,  104 => 49,  100 => 48,  90 => 40,  82 => 38,  79 => 37,  75 => 36,  66 => 30,  56 => 23,  48 => 18,  40 => 13,  31 => 8,  28 => 4,);
+        return array (  136 => 65,  129 => 61,  118 => 52,  107 => 50,  104 => 49,  100 => 48,  90 => 40,  82 => 38,  79 => 37,  75 => 36,  66 => 30,  56 => 23,  48 => 18,  40 => 13,  31 => 8,  28 => 4,);
     }
 }

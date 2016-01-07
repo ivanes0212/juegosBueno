@@ -1,35 +1,44 @@
 #cabecera{
-    background-color: #070737;
+    background-color: #101055;
     text-align: center;
-
 }
+#inicio{
+    
+    text-align: center;
+    
+    }
+
 h2{
-    background-color: #A9A9B6;
+    background-color: #8F8FB8;
+    font-family: sans-serif;
+    
 }
 #cuerpo{ 
     background-color: #CBCBFD;
     clear: both;
 }
 #pie{
-    background-color: #070737;
+    background-color: #101055;
     clear: both;
     font-family: sans-serif;
 }
 #notas{
-    color: white;
+    font-family: sans-serif;
     margin-left: 80%;
-    background-color: #8F8686;
+    background-color: #A6A6C2;
     text-align: justify;
     margin-right: 3%;
     }
 #texto{
-    background-color: #E6E6F5;
+    font-family: sans-serif;
+    background-color: #A6A6C2;
     margin-left: 10%;
     margin-right: 10%;
     text-align: justify;
 }
 #noti{
-    background-color: #B4B4C6;
+    font-family: sans-serif;
+    background-color: #A6A6C2;
     text-align: left;
     margin-left: 3%;
     margin-right: 70%;
@@ -64,32 +73,32 @@ h2{
 		list-style: none;
 		background: #ccc;
 		border-bottom: 1px solid #999;
+                background-color: #131360;
 		}
 	
 	#nav li { 
 		float: left;
 		margin: 0;
 		padding: 0;
+                
 		}
 	
 	#nav a {
+                color: #CBCBFD;
 		float: left;
 		display: block;
 		padding: 6px 30px 6px 5px;
 		text-decoration: none;
-		font-weight: bold;
+                font-weight: bold;
 		font-size: 90%;
-		color: #666;
-		background: #ccc url(../img/nav_slant.gif) no-repeat top right;
+		background-color: #131360;
 		}
 	
 	#nav #nav-1 a {
 		padding-left: 20px;
 		}
 	
-	#nav a:hover {
-		color: #000;
-		}
+	
 .col1{
      background-color: #E6E6F5;
      position: relative;

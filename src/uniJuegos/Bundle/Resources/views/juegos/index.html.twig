@@ -4,25 +4,20 @@
 {% block cuerpo -%}
     <center><h2>Juegos</h2></center>
 
-    <table class="records_list">
-        <thead>
-           
-        </thead>
-        <tbody>
+    <div id="inicio">
         {% for entity in entities %}
         <text align="center">
-        <a href="{{ path('juegos_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.iconoJue  ~ '') }}" width=250px height=250px/></a>
+        <a href="{{ path('juegos_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/unijuegos/imagenes/'~ entity.iconoJue  ~ '') }}" width=19% height=19%/></a>
         </text>
              
             
         {% endfor %}
-        </tbody>
-    </table>
+    </div>  
 <div id="edit">
         <ul>
         <li>
             <a href="{{ path('juegos_new') }}">
-                Create a new entry
+                Añadir nuevo juego
             </a>
         </li>
     </ul>

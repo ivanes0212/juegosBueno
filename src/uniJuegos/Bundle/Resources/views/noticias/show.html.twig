@@ -7,7 +7,9 @@
     
        
                 <div id="texto">
+                    <br>
                 {{ entity.textoNot }}
+                <br><br>
                 </div>
                 <br>
                 
@@ -17,14 +19,10 @@
       
 <div id="edit">
         <ul class="record_actions">
-    <li>
-        <a href="{{ path('noticias') }}">
-            Back to the list
-        </a>
-    </li>
+    
     <li>
         <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

@@ -30,24 +30,20 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
         // line 5
         echo "<center><h2>Juegos</h2></center>
 
-    <table class=\"records_list\">
-        <thead>
-           
-        </thead>
-        <tbody>
+    <div id=\"inicio\">
         ";
-        // line 12
+        // line 8
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 13
+            // line 9
             echo "        <text align=\"center\">
         <a href=\"";
-            // line 14
+            // line 10
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("juegos_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("bundles/unijuegos/imagenes/" . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "iconoJue")) . "")), "html", null, true);
-            echo "\" width=250px height=250px/></a>
+            echo "\" width=19% height=19%/></a>
         </text>
              
             
@@ -56,17 +52,16 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
-        echo "        </tbody>
-    </table>
+        // line 15
+        echo "    </div>  
 <div id=\"edit\">
         <ul>
         <li>
             <a href=\"";
-        // line 24
+        // line 19
         echo $this->env->getExtension('routing')->getPath("juegos_new");
         echo "\">
-                Create a new entry
+                Añadir nuevo juego
             </a>
         </li>
     </ul>
@@ -86,6 +81,6 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
 
     public function getDebugInfo()
     {
-        return array (  67 => 24,  60 => 19,  47 => 14,  44 => 13,  40 => 12,  31 => 5,  28 => 4,);
+        return array (  62 => 19,  56 => 15,  43 => 10,  40 => 9,  36 => 8,  31 => 5,  28 => 4,);
     }
 }

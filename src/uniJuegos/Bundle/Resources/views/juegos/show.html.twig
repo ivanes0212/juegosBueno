@@ -56,14 +56,10 @@
                  
 <div id="edit">
         <ul class="record_actions">
-    <li>
-        <a href="{{ path('juegos') }}">
-            Back to the list
-        </a>
-    </li>
+    
     <li>
         <a href="{{ path('juegos_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
