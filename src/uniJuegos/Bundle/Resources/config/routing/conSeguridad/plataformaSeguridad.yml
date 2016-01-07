@@ -1,0 +1,22 @@
+plataforma_new:
+    path:     /new
+    defaults: { _controller: "uniJuegosBundle:plataforma:new" }
+
+plataforma_create:
+    path:     /create
+    defaults: { _controller: "uniJuegosBundle:plataforma:create" }
+    requirements: { _method: post }
+
+plataforma_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniJuegosBundle:plataforma:edit" }
+
+plataforma_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniJuegosBundle:plataforma:update" }
+    requirements: { _method: post|put }
+
+plataforma_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniJuegosBundle:plataforma:delete" }
+    requirements: { _method: post|delete }

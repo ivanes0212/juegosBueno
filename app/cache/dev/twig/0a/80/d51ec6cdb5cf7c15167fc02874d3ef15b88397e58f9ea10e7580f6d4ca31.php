@@ -67,7 +67,7 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
         // line 25
         echo $this->env->getExtension('routing')->getPath("categorias_new");
         echo "\">
-                Create a new entry
+                Crear una nueva categoría
             </a>
         </li>
     </ul>

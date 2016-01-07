@@ -137,48 +137,51 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::showAction',));
             }
 
-            // plataforma_new
-            if ($pathinfo === '/plataforma/new') {
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::newAction',  '_route' => 'plataforma_new',);
-            }
-
-            // plataforma_create
-            if ($pathinfo === '/plataforma/create') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_plataforma_create;
+            if (0 === strpos($pathinfo, '/plataforma/conSeguridad')) {
+                // plataforma_new
+                if ($pathinfo === '/plataforma/conSeguridad/new') {
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::newAction',  '_route' => 'plataforma_new',);
                 }
 
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::createAction',  '_route' => 'plataforma_create',);
-            }
-            not_plataforma_create:
+                // plataforma_create
+                if ($pathinfo === '/plataforma/conSeguridad/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_plataforma_create;
+                    }
 
-            // plataforma_edit
-            if (preg_match('#^/plataforma/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::editAction',));
-            }
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::createAction',  '_route' => 'plataforma_create',);
+                }
+                not_plataforma_create:
 
-            // plataforma_update
-            if (preg_match('#^/plataforma/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_plataforma_update;
+                // plataforma_edit
+                if (preg_match('#^/plataforma/conSeguridad/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::editAction',));
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::updateAction',));
-            }
-            not_plataforma_update:
+                // plataforma_update
+                if (preg_match('#^/plataforma/conSeguridad/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_plataforma_update;
+                    }
 
-            // plataforma_delete
-            if (preg_match('#^/plataforma/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_plataforma_delete;
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::updateAction',));
                 }
+                not_plataforma_update:
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::deleteAction',));
+                // plataforma_delete
+                if (preg_match('#^/plataforma/conSeguridad/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_plataforma_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plataforma_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\plataformaController::deleteAction',));
+                }
+                not_plataforma_delete:
+
             }
-            not_plataforma_delete:
 
         }
 
@@ -197,48 +200,51 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::showAction',));
             }
 
-            // noticias_new
-            if ($pathinfo === '/noticias/new') {
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::newAction',  '_route' => 'noticias_new',);
-            }
-
-            // noticias_create
-            if ($pathinfo === '/noticias/create') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_noticias_create;
+            if (0 === strpos($pathinfo, '/noticias/conSeguridad')) {
+                // noticias_new
+                if ($pathinfo === '/noticias/conSeguridad/new') {
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::newAction',  '_route' => 'noticias_new',);
                 }
 
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::createAction',  '_route' => 'noticias_create',);
-            }
-            not_noticias_create:
+                // noticias_create
+                if ($pathinfo === '/noticias/conSeguridad/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_noticias_create;
+                    }
 
-            // noticias_edit
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::editAction',));
-            }
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::createAction',  '_route' => 'noticias_create',);
+                }
+                not_noticias_create:
 
-            // noticias_update
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_noticias_update;
+                // noticias_edit
+                if (preg_match('#^/noticias/conSeguridad/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::editAction',));
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::updateAction',));
-            }
-            not_noticias_update:
+                // noticias_update
+                if (preg_match('#^/noticias/conSeguridad/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_noticias_update;
+                    }
 
-            // noticias_delete
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_noticias_delete;
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::updateAction',));
                 }
+                not_noticias_update:
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::deleteAction',));
+                // noticias_delete
+                if (preg_match('#^/noticias/conSeguridad/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_noticias_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\noticiasController::deleteAction',));
+                }
+                not_noticias_delete:
+
             }
-            not_noticias_delete:
 
         }
 
@@ -257,49 +263,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::showAction',));
             }
 
-            // juegos_new
-            if ($pathinfo === '/juegos/new') {
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::newAction',  '_route' => 'juegos_new',);
-            }
-
-            // juegos_create
-            if ($pathinfo === '/juegos/create') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_juegos_create;
-                }
-
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::createAction',  '_route' => 'juegos_create',);
-            }
-            not_juegos_create:
-
-            // juegos_edit
-            if (preg_match('#^/juegos/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::editAction',));
-            }
-
-            // juegos_update
-            if (preg_match('#^/juegos/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_juegos_update;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::updateAction',));
-            }
-            not_juegos_update:
-
-            // juegos_delete
-            if (preg_match('#^/juegos/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_juegos_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::deleteAction',));
-            }
-            not_juegos_delete:
-
             // juegos_buscar_juego
             if ($pathinfo === '/juegos/buscarjuego') {
                 return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::buscarJuegoAction',  '_route' => 'juegos_buscar_juego',);
@@ -315,6 +278,52 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::responderJuegoAction',  '_route' => 'juegos_responder_juego',);
             }
             not_juegos_responder_juego:
+
+            if (0 === strpos($pathinfo, '/juegos/conSeguridad')) {
+                // juegos_new
+                if ($pathinfo === '/juegos/conSeguridad/new') {
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::newAction',  '_route' => 'juegos_new',);
+                }
+
+                // juegos_create
+                if ($pathinfo === '/juegos/conSeguridad/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_juegos_create;
+                    }
+
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::createAction',  '_route' => 'juegos_create',);
+                }
+                not_juegos_create:
+
+                // juegos_edit
+                if (preg_match('#^/juegos/conSeguridad/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::editAction',));
+                }
+
+                // juegos_update
+                if (preg_match('#^/juegos/conSeguridad/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_juegos_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::updateAction',));
+                }
+                not_juegos_update:
+
+                // juegos_delete
+                if (preg_match('#^/juegos/conSeguridad/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_juegos_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'juegos_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\juegosController::deleteAction',));
+                }
+                not_juegos_delete:
+
+            }
 
         }
 
@@ -333,48 +342,51 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_show')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::showAction',));
             }
 
-            // categorias_new
-            if ($pathinfo === '/categorias/new') {
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::newAction',  '_route' => 'categorias_new',);
-            }
-
-            // categorias_create
-            if ($pathinfo === '/categorias/create') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_categorias_create;
+            if (0 === strpos($pathinfo, '/categorias/conSeguridad')) {
+                // categorias_new
+                if ($pathinfo === '/categorias/conSeguridad/new') {
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::newAction',  '_route' => 'categorias_new',);
                 }
 
-                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::createAction',  '_route' => 'categorias_create',);
-            }
-            not_categorias_create:
+                // categorias_create
+                if ($pathinfo === '/categorias/conSeguridad/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_categorias_create;
+                    }
 
-            // categorias_edit
-            if (preg_match('#^/categorias/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::editAction',));
-            }
+                    return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::createAction',  '_route' => 'categorias_create',);
+                }
+                not_categorias_create:
 
-            // categorias_update
-            if (preg_match('#^/categorias/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_categorias_update;
+                // categorias_edit
+                if (preg_match('#^/categorias/conSeguridad/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_edit')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::editAction',));
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::updateAction',));
-            }
-            not_categorias_update:
+                // categorias_update
+                if (preg_match('#^/categorias/conSeguridad/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_categorias_update;
+                    }
 
-            // categorias_delete
-            if (preg_match('#^/categorias/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_categorias_delete;
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_update')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::updateAction',));
                 }
+                not_categorias_update:
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::deleteAction',));
+                // categorias_delete
+                if (preg_match('#^/categorias/conSeguridad/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_categorias_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'categorias_delete')), array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::deleteAction',));
+                }
+                not_categorias_delete:
+
             }
-            not_categorias_delete:
 
         }
 

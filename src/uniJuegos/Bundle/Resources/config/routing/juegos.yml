@@ -6,28 +6,7 @@ juegos_show:
     path:     /{id}/show
     defaults: { _controller: "uniJuegosBundle:juegos:show" }
 
-juegos_new:
-    path:     /new
-    defaults: { _controller: "uniJuegosBundle:juegos:new" }
 
-juegos_create:
-    path:     /create
-    defaults: { _controller: "uniJuegosBundle:juegos:create" }
-    requirements: { _method: post }
-
-juegos_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "uniJuegosBundle:juegos:edit" }
-
-juegos_update:
-    path:     /{id}/update
-    defaults: { _controller: "uniJuegosBundle:juegos:update" }
-    requirements: { _method: post|put }
-
-juegos_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "uniJuegosBundle:juegos:delete" }
-    requirements: { _method: post|delete }
 juegos_buscar_juego:
     path:     /buscarjuego
     defaults: { _controller: "uniJuegosBundle:juegos:buscarJuego" }
@@ -36,3 +15,6 @@ juegos_responder_juego:
     path:     /responderjuego
     defaults: { _controller: "uniJuegosBundle:juegos:responderJuego" }
     requirements: { _method: post|put }
+uni_juegos_juegos:
+    resource: "@uniJuegosBundle/Resources/config/routing/conSeguridad/juegosSeguridad.yml"
+    prefix:   /conSeguridad
