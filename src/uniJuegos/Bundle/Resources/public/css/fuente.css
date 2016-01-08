@@ -87,7 +87,7 @@ h2{
                 color: #CBCBFD;
 		float: left;
 		display: block;
-		padding: 6px 30px 6px 5px;
+		padding: 6px 50px 5px 5px;
 		text-decoration: none;
                 font-weight: bold;
 		font-size: 90%;
@@ -95,7 +95,7 @@ h2{
 		}
 	
 	#nav #nav-1 a {
-		padding-left: 20px;
+		padding-left: 83%;
 		}
 	
 	
@@ -107,7 +107,7 @@ h2{
      height: 25%;
      overflow: auto;
      display: block;
-     margin-left: 350px;
+     margin-left: 24%;
      text-align: center;
      font-family:sans-serif;
      }
@@ -134,7 +134,7 @@ h2{
      overflow: auto;
      display: block;
      clear: both;
-     margin-left: 350px;
+     margin-left: 24%;
      text-align: center;
      font-family:sans-serif;
      }
@@ -159,8 +159,9 @@ h2{
      width: 50%;
      overflow: auto;
      display: block;
-     margin-left: 350px;
+     margin-left: 24%;
      margin-bottom: 0;
      font-family:sans-serif;
+     text-align: center;
      }
      
