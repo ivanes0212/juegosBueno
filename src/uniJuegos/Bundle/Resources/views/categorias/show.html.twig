@@ -11,7 +11,7 @@
               
             
                 
-                    <div align="right"><h4><u>Juegos: </u> </h4>
+                    <div id="noti"><h4><u>Juegos: </u> </h4>
                     
                  {% for jue in entity.catjues %}
             
@@ -20,9 +20,9 @@
              {% endfor %}  
                  </div>
        
-
+<div id="edit">
         <ul class="record_actions">
-    
+    <h4>Administración</h4>
     <li>
         <a href="{{ path('categorias_edit', { 'id': entity.id }) }}">
             Editar categoría
@@ -30,4 +30,5 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+</div>
 {% endblock %}

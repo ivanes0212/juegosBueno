@@ -18,14 +18,11 @@
     </table>
 <div id="edit">
         <ul class="record_actions">
-    <li>
-        <a href="{{ path('plataforma') }}">
-            Back to the list
-        </a>
-    </li>
+            <h4>Administración</h4>
+    
     <li>
         <a href="{{ path('plataforma_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar plataforma
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
