@@ -58,13 +58,14 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
         // line 18
         echo "        
 <div id=\"edit\">
+    <h4><center>Administración</center></h4>
         <ul>
         <li>
             <a href=\"";
-        // line 22
+        // line 23
         echo $this->env->getExtension('routing')->getPath("plataforma_new");
         echo "\">
-                Create a new entry
+                Añadir nueva plataforma
             </a>
         </li>
     </ul>
@@ -84,6 +85,6 @@ class __TwigTemplate_1f618c427b34dcb17254cd78554ba29a02b4e2f6e6d6f31975f145aa511
 
     public function getDebugInfo()
     {
-        return array (  65 => 22,  59 => 18,  46 => 13,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
+        return array (  66 => 23,  59 => 18,  46 => 13,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
     }
 }

@@ -42,7 +42,7 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
               
             
                 
-                    <div align=\"right\"><h4><u>Juegos: </u> </h4>
+                    <div id=\"noti\"><h4><u>Juegos: </u> </h4>
                     
                  ";
         // line 16
@@ -67,29 +67,23 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
         echo "  
                  </div>
        
-
+<div id=\"edit\">
         <ul class=\"record_actions\">
+    <h4>Administración</h4>
     <li>
         <a href=\"";
-        // line 26
-        echo $this->env->getExtension('routing')->getPath("categorias");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 31
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("categorias_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
-            Edit
+            Editar categoría
         </a>
     </li>
     <li>";
-        // line 35
+        // line 31
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
 </ul>
+</div>
 ";
     }
 
@@ -105,6 +99,6 @@ class __TwigTemplate_bb80013375afede0f2815ec7fba45ce9195ea4d8fe6f7bdf7caa2f597d6
 
     public function getDebugInfo()
     {
-        return array (  90 => 35,  83 => 31,  75 => 26,  67 => 20,  56 => 18,  53 => 17,  49 => 16,  39 => 9,  31 => 5,  28 => 4,);
+        return array (  83 => 31,  76 => 27,  67 => 20,  56 => 18,  53 => 17,  49 => 16,  39 => 9,  31 => 5,  28 => 4,);
     }
 }

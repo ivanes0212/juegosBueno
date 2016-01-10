@@ -42,21 +42,21 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
             ";
         // line 13
         $this->displayBlock('cabecera', $context, $blocks);
-        // line 23
+        // line 25
         echo "        </div>
        
          <div id=\"cuerpo\">
             ";
-        // line 26
+        // line 28
         $this->displayBlock('cuerpo', $context, $blocks);
-        // line 27
+        // line 29
         echo "        </div>
         
          <div id=\"pie\">
             ";
-        // line 30
+        // line 32
         $this->displayBlock('pie', $context, $blocks);
-        // line 39
+        // line 41
         echo "        </div>
     </body>
 </html>
@@ -83,43 +83,45 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
     public function block_cabecera($context, array $blocks = array())
     {
         // line 14
-        echo "                <h1><font color=\"#CBCBFD\"><img src=\"";
+        echo "                <h1><font color=\"#CBCBFD\" size=\"30\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/unijuegos/imagenes/mando.png"), "html", null, true);
         echo "\"width=40px height=40px>Games</font></h1>
-                <ul id=\"nav\">
+                <h3>
+                    <ul id=\"nav\">
         <li id=\"nav-1\"><a href=\"";
-        // line 16
+        // line 17
         echo $this->env->getExtension('routing')->getPath("juegos");
         echo "\">Juegos</a></li>
 \t<li id=\"nav-2\"><a href=\"";
-        // line 17
+        // line 18
         echo $this->env->getExtension('routing')->getPath("categorias");
         echo "\">Categorias</a></li>
 \t<li id=\"nav-3\"><a href=\"";
-        // line 18
+        // line 19
         echo $this->env->getExtension('routing')->getPath("plataforma");
         echo "\">Plataformas</a></li>
         <li id=\"nav-4\"><a href=\"";
-        // line 19
+        // line 20
         echo $this->env->getExtension('routing')->getPath("noticias");
         echo "\">Noticias</a></li>
         <li id=\"nav-5\"><a href=\"";
-        // line 20
+        // line 21
         echo $this->env->getExtension('routing')->getPath("juegos_buscar_juego");
         echo "\">Buscar Juego</a></li>
-                </ul>
+                    </ul>
+                </h3>
             ";
     }
 
-    // line 26
+    // line 28
     public function block_cuerpo($context, array $blocks = array())
     {
     }
 
-    // line 30
+    // line 32
     public function block_pie($context, array $blocks = array())
     {
-        // line 31
+        // line 33
         echo "                <h6><font color=\"#CBCBFD\">
                     CONTACTO -> ivanesfc@hotmail.com
                     <br>
@@ -142,6 +144,6 @@ class __TwigTemplate_f16ce20375d99b0543fd2d597ee17148ceb88daa8e524789bc0ba8dc66d
 
     public function getDebugInfo()
     {
-        return array (  123 => 31,  120 => 30,  115 => 26,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 39,  58 => 30,  53 => 27,  51 => 26,  46 => 23,  44 => 13,  30 => 5,  24 => 1,  85 => 23,  82 => 22,  77 => 17,  74 => 16,  68 => 10,  65 => 9,  54 => 22,  49 => 19,  47 => 16,  42 => 13,  34 => 6,  62 => 19,  56 => 26,  43 => 10,  40 => 9,  36 => 9,  31 => 4,  28 => 4,);
+        return array (  125 => 33,  122 => 32,  117 => 28,  109 => 21,  105 => 20,  101 => 19,  97 => 18,  93 => 17,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 41,  58 => 32,  53 => 29,  51 => 28,  46 => 25,  44 => 13,  34 => 6,  30 => 5,  24 => 1,  63 => 20,  56 => 15,  43 => 10,  40 => 9,  36 => 9,  31 => 5,  28 => 4,);
     }
 }

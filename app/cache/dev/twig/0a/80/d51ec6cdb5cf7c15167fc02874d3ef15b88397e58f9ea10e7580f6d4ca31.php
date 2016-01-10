@@ -61,10 +61,11 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
         echo "        
         
 <div id=\"edit\">
+    <h4><center>Administración</center></h4>
         <ul>
         <li>
             <a href=\"";
-        // line 25
+        // line 26
         echo $this->env->getExtension('routing')->getPath("categorias_new");
         echo "\">
                 Crear una nueva categoría
@@ -87,6 +88,6 @@ class __TwigTemplate_0a80d51ec6cdb5cf7c15167fc02874d3ef15b88397e58f9ea10e7580f6d
 
     public function getDebugInfo()
     {
-        return array (  68 => 25,  61 => 20,  46 => 13,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
+        return array (  69 => 26,  61 => 20,  46 => 13,  42 => 11,  38 => 10,  31 => 5,  28 => 4,);
     }
 }

@@ -122,7 +122,7 @@ class __TwigTemplate_5a8ce3ebc82935bc08fcb4b3847d6f3c2bd0c8cde83cd7e438bd3c0da50
                  
 <div id=\"edit\">
         <ul class=\"record_actions\">
-    
+            <h4>Administración</h4>
     <li>
         <a href=\"";
         // line 61

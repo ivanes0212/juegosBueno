@@ -55,10 +55,11 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
         // line 15
         echo "    </div>  
 <div id=\"edit\">
+    <h4><center>Administración</center></h4>
         <ul>
         <li>
             <a href=\"";
-        // line 19
+        // line 20
         echo $this->env->getExtension('routing')->getPath("juegos_new");
         echo "\">
                 Añadir nuevo juego
@@ -81,6 +82,6 @@ class __TwigTemplate_a0a23d18a1b2228f36d6592654bd6aa9ef60391b168dc817da9b5f1e07a
 
     public function getDebugInfo()
     {
-        return array (  62 => 19,  56 => 15,  43 => 10,  40 => 9,  36 => 8,  31 => 5,  28 => 4,);
+        return array (  63 => 20,  56 => 15,  43 => 10,  40 => 9,  36 => 8,  31 => 5,  28 => 4,);
     }
 }
