@@ -9,13 +9,23 @@
             
         <h2><a href="{{ path('categorias_show', { 'id': entity.id }) }}">{{ entity.nombreCat }}</a></h2>
               
-        <h6>{{ entity.descCat }} 
+        <h6>{{ entity.descCat }} </h6>
+               <br> 
+       {% endfor %}
                 
-       
-                <br>
+                <div id="edit">
+    
+        <ul>
+        <li>
+            <a href="{{ path('categorias_buscar_categoria') }}">
+                Volver
+            </a>
+        </li>
+    </ul>
+</div>
                 
                 
                 
                 
-        {% endfor %}
+        
         {% endblock %}

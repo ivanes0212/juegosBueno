@@ -124,7 +124,7 @@ class noticias
     }
     
     /**
-* @ORM\ManyToOne(targetEntity="juegos", inversedBy="juenots", cascade={"remove"})
+* @ORM\ManyToOne(targetEntity="juegos", inversedBy="juenots")
 */
 
 private $notjue;

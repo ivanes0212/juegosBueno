@@ -94,7 +94,7 @@ class categorias
     }
     
     /**
-* @ORM\OneToMany(targetEntity="juegos", mappedBy="juecat", cascade={"remove"})
+* @ORM\OneToMany(targetEntity="juegos", mappedBy="juecat")
 */
 
 private $catjues;

@@ -225,7 +225,7 @@ $this->jueplat = new ArrayCollection();
 
     
     /**
-* @ORM\OneToMany(targetEntity="noticias", mappedBy="notjue", cascade={"remove"})
+* @ORM\OneToMany(targetEntity="noticias", mappedBy="notjue")
 */
 
 private $juenots;

@@ -52,21 +52,34 @@ class __TwigTemplate_87378b87b0ffb3d779ec4a6e33532b1ca41e201ca947b1aab8604a25320
         <h6>";
             // line 12
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descCat"), "html", null, true);
-            echo " 
-                
-       
-                <br>
-                
-                
-                
-                
-        ";
+            echo " </h6>
+               <br> 
+       ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
-        echo "        ";
+        // line 15
+        echo "                
+                <div id=\"edit\">
+    
+        <ul>
+        <li>
+            <a href=\"";
+        // line 20
+        echo $this->env->getExtension('routing')->getPath("categorias_buscar_categoria");
+        echo "\">
+                Volver
+            </a>
+        </li>
+    </ul>
+</div>
+                
+                
+                
+                
+        
+        ";
     }
 
     public function getTemplateName()
@@ -81,6 +94,6 @@ class __TwigTemplate_87378b87b0ffb3d779ec4a6e33532b1ca41e201ca947b1aab8604a25320
 
     public function getDebugInfo()
     {
-        return array (  69 => 21,  54 => 12,  47 => 10,  43 => 8,  39 => 7,  34 => 5,  31 => 4,  28 => 3,);
+        return array (  70 => 20,  63 => 15,  54 => 12,  47 => 10,  43 => 8,  39 => 7,  34 => 5,  31 => 4,  28 => 3,);
     }
 }
