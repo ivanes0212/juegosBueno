@@ -10,3 +10,12 @@ categorias_show:
 uni_juegos_categorias:
     resource: "@uniJuegosBundle/Resources/config/routing/conSeguridad/categoriasSeguridad.yml"
     prefix:   /conSeguridad
+    
+categorias_buscar_categoria:
+    path:     /buscarcategoria
+    defaults: { _controller: "uniJuegosBundle:categorias:buscarCategoria" }
+
+categorias_responder_categoria:
+    path:     /respondercategoria
+    defaults: { _controller: "uniJuegosBundle:categorias:responderCategoria" }
+    requirements: { _method: post|put }

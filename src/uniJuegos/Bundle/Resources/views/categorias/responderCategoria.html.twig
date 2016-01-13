@@ -1,0 +1,21 @@
+{% extends 'uniJuegosBundle::layout.html.twig' %}
+
+{% block cuerpo %}
+    
+    <h1>Listado de categorias {{titulo}}:</h1>
+ <tbody>
+        {% for entity in entities %}
+            
+            
+        <h2><a href="{{ path('categorias_show', { 'id': entity.id }) }}">{{ entity.nombreCat }}</a></h2>
+              
+        <h6>{{ entity.descCat }} 
+                
+       
+                <br>
+                
+                
+                
+                
+        {% endfor %}
+        {% endblock %}

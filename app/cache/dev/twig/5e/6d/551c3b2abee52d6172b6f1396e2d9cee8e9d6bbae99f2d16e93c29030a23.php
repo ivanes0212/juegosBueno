@@ -26,7 +26,7 @@ class __TwigTemplate_5e6d551c3b2abee52d6172b6f1396e2d9cee8e9d6bbae99f2d16e93c290
         echo "</title>
     </head>
     <body>
-        <h1>CUIDADO</h1>
+        <h1>NO DEBERIA ESTAR AQUI</h1>
         <h2>The server returned a \"";
         // line 9
         echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : $this->getContext($context, "status_code")), "html", null, true);
@@ -35,9 +35,8 @@ class __TwigTemplate_5e6d551c3b2abee52d6172b6f1396e2d9cee8e9d6bbae99f2d16e93c290
         echo "\".</h2>
 
         <div>
-            Something is broken. Please e-mail us at [email] and let us know
-            what you were doing when this error occurred. We will fix it as soon
-            as possible. Sorry for any inconvenience caused.
+            FALLO
+            
         </div>
     </body>
 </html>

@@ -42,21 +42,21 @@ class __TwigTemplate_e0cefca620ab765c3e497ad6e1ed11a374f66495d227188a6cbe18a7e5b
             ";
         // line 13
         $this->displayBlock('cabecera', $context, $blocks);
-        // line 25
+        // line 26
         echo "        </div>
        
          <div id=\"cuerpo\">
             ";
-        // line 28
-        $this->displayBlock('cuerpo', $context, $blocks);
         // line 29
+        $this->displayBlock('cuerpo', $context, $blocks);
+        // line 30
         echo "        </div>
         
          <div id=\"pie\">
             ";
-        // line 32
+        // line 33
         $this->displayBlock('pie', $context, $blocks);
-        // line 41
+        // line 42
         echo "        </div>
     </body>
 </html>
@@ -108,20 +108,24 @@ class __TwigTemplate_e0cefca620ab765c3e497ad6e1ed11a374f66495d227188a6cbe18a7e5b
         // line 21
         echo $this->env->getExtension('routing')->getPath("juegos_buscar_juego");
         echo "\">Buscar Juego</a></li>
+        <li id=\"nav-5\"><a href=\"";
+        // line 22
+        echo $this->env->getExtension('routing')->getPath("categorias_buscar_categoria");
+        echo "\">Buscar Categoria</a></li>
                     </ul>
                 </h3>
             ";
     }
 
-    // line 28
+    // line 29
     public function block_cuerpo($context, array $blocks = array())
     {
     }
 
-    // line 32
+    // line 33
     public function block_pie($context, array $blocks = array())
     {
-        // line 33
+        // line 34
         echo "                <h6><font color=\"#CBCBFD\">
                     CONTACTO -> ivanesfc@hotmail.com
                     <br>
@@ -144,6 +148,6 @@ class __TwigTemplate_e0cefca620ab765c3e497ad6e1ed11a374f66495d227188a6cbe18a7e5b
 
     public function getDebugInfo()
     {
-        return array (  125 => 33,  122 => 32,  117 => 28,  109 => 21,  105 => 20,  101 => 19,  97 => 18,  93 => 17,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 41,  58 => 32,  53 => 29,  51 => 28,  46 => 25,  44 => 13,  30 => 5,  24 => 1,  85 => 23,  82 => 22,  77 => 17,  74 => 16,  68 => 10,  65 => 9,  54 => 22,  49 => 19,  47 => 16,  42 => 13,  34 => 6,  63 => 20,  56 => 26,  43 => 10,  40 => 9,  36 => 9,  31 => 4,  28 => 4,);
+        return array (  129 => 34,  126 => 33,  121 => 29,  113 => 22,  109 => 21,  105 => 20,  101 => 19,  97 => 18,  93 => 17,  86 => 14,  83 => 13,  76 => 7,  73 => 6,  67 => 5,  60 => 42,  58 => 33,  53 => 30,  51 => 29,  46 => 26,  44 => 13,  36 => 9,  34 => 6,  30 => 5,  24 => 1,);
     }
 }

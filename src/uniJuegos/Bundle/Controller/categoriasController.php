@@ -221,4 +221,33 @@ class categoriasController extends Controller
             ->getForm()
         ;
     }
+    
+    public function buscarCategoriaAction()
+    {
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('uniJuegosBundle:categorias')->findAll();
+
+        return $this->render('uniJuegosBundle:categorias:buscarCategoria.html.twig', array(
+            'cats' => $entities,
+        ));
+    }
+
+   public function responderCategoriaAction(Request $request)
+    {
+      //    $nom= $_POST['categoria']; // Coger variables usando php clásico.
+         $nom= $request->request->get('nombre'); // Modo symfony2
+         
+         $em = $this->getDoctrine()->getManager();
+        if  ($nom=="Todas")
+                $entities = $em->getRepository('uniJuegosBundle:categorias')->findAll();
+        else 
+            $entities = $em->getRepository('uniJuegosBundle:categorias')->findByNombreCat($nom);
+
+        return $this->render('uniJuegosBundle:categorias:responderCategoria.html.twig', array(
+            'entities' => $entities,
+            'titulo'=> $nom,
+        ));
+    }
 }

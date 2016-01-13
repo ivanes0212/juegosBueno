@@ -388,6 +388,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
+            // categorias_buscar_categoria
+            if ($pathinfo === '/categorias/buscarcategoria') {
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::buscarCategoriaAction',  '_route' => 'categorias_buscar_categoria',);
+            }
+
+            // categorias_responder_categoria
+            if ($pathinfo === '/categorias/respondercategoria') {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_categorias_responder_categoria;
+                }
+
+                return array (  '_controller' => 'uniJuegos\\Bundle\\Controller\\categoriasController::responderCategoriaAction',  '_route' => 'categorias_responder_categoria',);
+            }
+            not_categorias_responder_categoria:
+
         }
 
         // uni_juegos_homepage
